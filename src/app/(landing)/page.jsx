@@ -6,6 +6,13 @@ import { Button } from "@/components/common/Button";
 import { HowItWorks } from "./_components/HowItWorks";
 import { Vision } from "./_components/Vision";
 import { PlatformFeatures } from "./_components/PlatformFeatures";
+import { WhyUnyta } from "./_components/WhyUnyta";
+import { CreatorOpportunities } from "./_components/CreatorOpportunities";
+import { BrandOpportunities } from "./_components/BrandOpportunities";
+import { Pricing } from "./_components/Pricing";
+import { GettingStarted } from "./_components/GettingStarted";
+import { WhyChooseUs } from "./_components/WhyChooseUs";
+import { FAQ } from "./_components/FAQ";
 
 export default function Home() {
   return (
@@ -135,6 +142,13 @@ export default function Home() {
       <HowItWorks />
       <Vision />
       <PlatformFeatures />
+      <WhyUnyta />
+      <CreatorOpportunities />
+      <BrandOpportunities />
+      <Pricing />
+      <GettingStarted />
+      <WhyChooseUs />
+      <FAQ />
 
     </main>
   );
