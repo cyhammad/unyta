@@ -43,31 +43,31 @@ export const Navbar = () => {
           href="/"
           className="flex items-center justify-center shrink-0"
         >
-          <Image src="/image.png" alt="Unyta Logo" width={21} height={21} className="object-contain" />
+          <Image src="/image.png" alt="Unyta Logo" width={21} height={21} className="object-contain" style={{ height: "auto" }} />
         </Link>
         
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-x-6 whitespace-nowrap">
           <Link
-            href="/features"
+            href="#features"
             className="hover:text-white font-light tracking-wide transition-colors"
           >
             Features
           </Link>
           <Link
-            href="/pricing"
+            href="#pricing"
             className="hover:text-white font-light tracking-wide transition-colors"
           >
             Pricing
           </Link>
           <Link
-            href="/how-it-works"
+            href="#how-it-works"
             className="hover:text-white font-light tracking-wide transition-colors"
           >
             How It Works
           </Link>
           <Link
-            href="/faq"
+            href="#faq"
             className="hover:text-white font-light tracking-wide transition-colors"
           >
             FAQ
@@ -92,16 +92,16 @@ export const Navbar = () => {
           isOpen ? "max-h-64 py-2 border border-stone-200/10 opacity-100" : "max-h-0 py-0 border-transparent opacity-0"
         }`}
       >
-        <Link href="/features" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
+        <Link href="#features" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
           Features
         </Link>
-        <Link href="/pricing" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
+        <Link href="#pricing" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
           Pricing
         </Link>
-        <Link href="/how-it-works" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
+        <Link href="#how-it-works" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
           How It Works
         </Link>
-        <Link href="/faq" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
+        <Link href="#faq" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
           FAQ
         </Link>
         </div>

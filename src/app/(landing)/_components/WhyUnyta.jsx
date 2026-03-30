@@ -20,7 +20,7 @@ export const WhyUnyta = () => {
   ];
 
   return (
-    <section className="w-full bg-[#F9F6F6] md:h-fit flex flex-col items-center justify-start overflow-hidden border-y border-black/5 py-12 md:pt-16 md:pb-12">
+    <section className="w-full bg-[#F9F6F6] flex flex-col items-center justify-start overflow-hidden border-y border-black/5 py-12 md:py-16">
       <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
         {/* LOGO MONOGRAM */}
         <motion.div
@@ -37,6 +37,7 @@ export const WhyUnyta = () => {
              height={60} 
              className="object-contain"
              style={{ 
+               height: "auto",
                filter: "brightness(0) saturate(100%) invert(11%) sepia(34%) saturate(4529%) hue-rotate(346deg) brightness(91%) contrast(98%)" 
              }}
            />
@@ -65,7 +66,7 @@ export const WhyUnyta = () => {
         </motion.p>
 
         {/* CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full max-w-5xl px-6">
           {cards.map((card, index) => (
             <motion.div
               key={index}

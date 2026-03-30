@@ -13,8 +13,17 @@ import { Pricing } from "./_components/Pricing";
 import { GettingStarted } from "./_components/GettingStarted";
 import { WhyChooseUs } from "./_components/WhyChooseUs";
 import { FAQ } from "./_components/FAQ";
+import { AboutUnyta } from "./_components/AboutUnyta";
+import { CTA } from "./_components/CTA";
+import { Footer } from "./_components/Footer";
+import { CreatorDialog } from "./_components/CreatorDialog";
+import { BrandDialog } from "./_components/BrandDialog";
+import { useState } from "react";
 
 export default function Home() {
+  const [isCreatorModalOpen, setIsCreatorModalOpen] = useState(false);
+  const [isBrandModalOpen, setIsBrandModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen w-full bg-white font-sans text-stone-900">
       {/* HERO SECTION */}
@@ -31,7 +40,7 @@ export default function Home() {
         <motion.h1 
           variants={{
             hidden: { y: 30, opacity: 0 },
-            visible: { y: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } }
+            visible: { y: 0, opacity: 1, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
           }}
           className="text-balance font-cormorant text-[36px] md:text-[48px] font-semibold tracking-tight text-[#22000C] leading-[1.1] md:leading-[1.2]"
         >
@@ -52,7 +61,7 @@ export default function Home() {
         <motion.p 
           variants={{
             hidden: { y: 20, opacity: 0 },
-            visible: { y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
+            visible: { y: 0, opacity: 1, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
           }}
           className="mx-auto mt-2 max-w-lg font-light text-[#22000C] text-[18px] font-sans sm:text-xl"
         >
@@ -64,7 +73,7 @@ export default function Home() {
         <motion.div 
           variants={{
             hidden: { y: 20, opacity: 0 },
-            visible: { y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
+            visible: { y: 0, opacity: 1, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
           }}
           className="mt-6 flex flex-col items-center gap-y-3"
         >
@@ -72,10 +81,16 @@ export default function Home() {
             Apply for Early Access
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
-            <button className="h-12 w-full sm:w-auto rounded-full bg-[#741717] px-8 text-sm tracking-wide text-white transition-all hover:scale-105 active:scale-95">
+            <button 
+              onClick={() => setIsCreatorModalOpen(true)}
+              className="h-12 w-full sm:w-auto rounded-full bg-[#741717] px-8 text-sm tracking-wide text-white transition-all hover:scale-105 active:scale-95"
+            >
               Join as a Creator
             </button>
-            <button className="h-12 w-full sm:w-auto rounded-full border-2 border-[#741717] bg-white/30 px-8 text-sm tracking-wide text-[#741717] backdrop-blur-sm transition-all hover:bg-white/50 active:scale-95">
+            <button 
+              onClick={() => setIsBrandModalOpen(true)}
+              className="h-12 w-full sm:w-auto rounded-full border-2 border-[#741717] bg-white/30 px-8 text-sm tracking-wide text-[#741717] backdrop-blur-sm transition-all hover:bg-white/50 active:scale-95"
+            >
               Join as a Brand
             </button>
           </div>
@@ -88,7 +103,7 @@ export default function Home() {
         <motion.div
           initial={{ y: 250, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "circOut", delay: 0.15 }}
+          transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
         >
           <div className="w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] translate-y-[-50px] md:translate-y-[-150px]">
             <Image
@@ -106,7 +121,7 @@ export default function Home() {
           className="z-20"
           initial={{ y: 300, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.7, ease: "circOut", delay: 0.35 }}
+          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
         >
           <div className="w-[120px] sm:w-[160px] md:w-[200px] lg:w-[240px] translate-y-[-10px] md:translate-y-[-65px]">
             <Image
@@ -123,7 +138,7 @@ export default function Home() {
         <motion.div
           initial={{ y: 250, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "circOut", delay: 0.55 }}
+          transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
         >
           <div className="w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] translate-y-[-40px] md:translate-y-[-120px]">
             <Image
@@ -149,6 +164,22 @@ export default function Home() {
       <GettingStarted />
       <WhyChooseUs />
       <FAQ />
+      <AboutUnyta />
+      <CTA 
+        onJoinCreator={() => setIsCreatorModalOpen(true)} 
+        onJoinBrand={() => setIsBrandModalOpen(true)}
+      />
+      <Footer />
+
+      <CreatorDialog 
+        isOpen={isCreatorModalOpen} 
+        onClose={() => setIsCreatorModalOpen(false)} 
+      />
+
+      <BrandDialog 
+        isOpen={isBrandModalOpen} 
+        onClose={() => setIsBrandModalOpen(false)} 
+      />
 
     </main>
   );

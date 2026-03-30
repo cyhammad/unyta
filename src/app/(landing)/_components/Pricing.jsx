@@ -87,7 +87,7 @@ export const Pricing = () => {
   const currentPlans = plans[audience];
 
   return (
-    <section className="w-full py-24 bg-[#F9F6F6] flex flex-col items-center overflow-hidden">
+    <section id="pricing" className="w-full py-24 bg-[#F9F6F6] flex flex-col items-center overflow-hidden">
       {/* HEADER */}
       <motion.div
         initial={{ y: 30, opacity: 0 }}

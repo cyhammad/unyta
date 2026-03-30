@@ -206,7 +206,7 @@ export const PlatformFeatures = () => {
   const currentStyle = tabStyles[activeTab] || tabStyles["home"];
 
   return (
-    <section className="w-full py-24 bg-white flex flex-col items-center overflow-hidden">
+    <section id="features" className="w-full py-24 bg-white flex flex-col items-center overflow-hidden">
       {/* HEADER */}
       <motion.div 
         initial={{ y: 30, opacity: 0 }}
@@ -229,13 +229,13 @@ export const PlatformFeatures = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="flex bg-[#F9F6F6] p-1.5 rounded-2xl mb-8 md:mb-10 w-[90vw] md:w-full md:max-w-4xl mx-auto overflow-x-auto no-scrollbar justify-start md:justify-center border border-black/5 snap-x"
+        className="flex items-center bg-[#F9F6F6] p-1 rounded-2xl mb-8 md:mb-10 w-[90vw] md:w-fit mx-auto overflow-x-auto no-scrollbar justify-start md:justify-center border border-black/5 snap-x"
       >
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-5 md:px-8 py-2 md:py-3 rounded-xl text-[16px] md:text-[18px] font-cormorant font-semibold tracking-wide transition-all duration-300 whitespace-nowrap flex-shrink-0 snap-center ${
+            className={`px-5 md:px-8 py-2 md:py-3.5 rounded-xl text-[16px] md:text-[18px] font-cormorant font-semibold tracking-wide transition-all duration-300 whitespace-nowrap flex-shrink-0 snap-center ${
               activeTab === tab.id
                 ? "bg-[#541409] text-white shadow-lg"
                 : "text-[#22000C] hover:text-[#541409]"
@@ -247,15 +247,15 @@ export const PlatformFeatures = () => {
       </motion.div>
 
       {/* CONTENT REGION */}
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center justify-items-center">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center justify-items-center">
         {/* LEFT: IMAGE BOX */}
         <motion.div 
           initial={{ x: -40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: "circOut", delay: 0.1 }}
-          className="bg-[#741717] rounded-[20px] relative overflow-hidden flex flex-col items-center pt-10"
-          style={{ width: "min(100%, 580.4px)", height: "506px" }}
+          className="bg-[#741717] rounded-[20px] relative overflow-hidden flex flex-col items-center pt-10 w-full"
+          style={{ maxWidth: "580.4px", height: "auto", minHeight: "340px" }}
         >
           <div 
             className="relative w-full flex justify-center transition-all duration-500"
@@ -283,7 +283,7 @@ export const PlatformFeatures = () => {
           variants={{
             visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } }
           }}
-          className="flex flex-col justify-between h-[506px] w-full py-2 gap-4 md:gap-2"
+          className="flex flex-col justify-between lg:h-[506px] w-full py-2 gap-3 md:gap-2"
         >
           {currentFeatures.map((feature, index) => (
             <motion.div

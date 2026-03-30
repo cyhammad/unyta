@@ -55,7 +55,7 @@ export const HowItWorks = () => {
   const currentContent = activeTab === "creators" ? creatorContent : brandContent;
 
   return (
-    <section className="flex flex-col items-center bg-white py-15 px-6 md:px-12 overflow-hidden">
+    <section id="how-it-works" className="flex flex-col items-center bg-white py-15 px-6 md:px-12 overflow-hidden">
       <motion.h2 
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

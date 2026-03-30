@@ -49,8 +49,8 @@ export const BrandOpportunities = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "circOut" }}
-          className="bg-[#F5F3F2] rounded-[20px] relative overflow-hidden flex flex-col items-center pt-10 order-2 lg:order-1"
-          style={{ width: "min(100%, 580.4px)", height: "506px" }}
+          className="bg-[#F5F3F2] rounded-[20px] relative overflow-hidden flex flex-col items-center pt-10 order-2 lg:order-1 w-full"
+          style={{ maxWidth: "580.4px", minHeight: "340px" }}
         >
           <div 
             className="relative w-full flex justify-center transition-all duration-500"

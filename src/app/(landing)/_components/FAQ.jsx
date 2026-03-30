@@ -26,7 +26,7 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="w-full py-24 bg-white flex flex-col items-center overflow-hidden">
+    <section id="faq" className="w-full py-24 bg-white flex flex-col items-center overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         {/* HEADER */}

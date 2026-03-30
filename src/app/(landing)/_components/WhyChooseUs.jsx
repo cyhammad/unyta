@@ -43,7 +43,7 @@ export const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="w-full h-auto min-h-[498px] bg-[#24000C] flex flex-col items-center justify-center py-18 md:py-20">
+    <section className="w-full bg-[#24000C] flex flex-col items-center justify-center py-14 md:py-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         {/* HEADER */}

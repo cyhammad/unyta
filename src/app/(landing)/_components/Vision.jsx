@@ -51,6 +51,7 @@ export const Vision = () => {
                 height={40} 
                 className="object-contain h-auto"
                 style={{ 
+                  height: "auto",
                   filter: "brightness(0) saturate(100%) invert(7%) sepia(91%) saturate(2367%) hue-rotate(274deg) brightness(96%) contrast(119%)" 
                 }}
               />
@@ -76,11 +77,11 @@ export const Vision = () => {
               hidden: { scaleX: 0, opacity: 0 },
               visible: { scaleX: 1, opacity: 1, transition: { duration: 1.2, ease: "easeInOut", delay: 0.3 } }
             }}
-            className="absolute top-[26px] left-[6%] right-[6%] h-[1px] hidden md:block origin-left"
+            className="absolute top-[26px] left-[6%] right-[6%] h-[1px] hidden lg:block origin-left"
             style={{ background: "linear-gradient(90deg, #E8C6C1 0%, #58180E 50%, #E8C6C1 100%)" }}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-y-12 md:gap-x-4 lg:gap-x-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-y-12 gap-x-4 lg:gap-x-8">
             {steps.map((step, index) => (
               <motion.div 
                 key={index} 
