@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
@@ -8,6 +8,17 @@ import { motion, AnimatePresence } from "motion/react";
 export const BrandDialog = ({ isOpen, onClose }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.toggleLenisScroll) {
+      window.toggleLenisScroll(isOpen);
+    }
+    return () => {
+      if (typeof window !== "undefined" && window.toggleLenisScroll) {
+        window.toggleLenisScroll(false);
+      }
+    };
+  }, [isOpen]);
 
   return (
     <AnimatePresence>
@@ -38,9 +49,9 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 "w-full h-[95dvh] rounded-t-[24px] rounded-b-none pt-6 px-5 pb-6 gap-3",
                 /* Tablet: centered card */
                 "sm:w-[480px] sm:h-auto sm:max-h-[90vh] sm:rounded-[24px] sm:pt-8 sm:px-8 sm:pb-8 sm:gap-3",
-                /* Desktop: exact Figma spec, top-right */
                 "lg:w-[590px] lg:h-[840px] lg:max-h-[92vh] lg:rounded-[24px] lg:pt-8 lg:px-8 lg:pb-8 lg:gap-4 lg:mt-4",
               ].join(" ")}
+              data-lenis-prevent
             >
               {/* CLOSE BUTTON */}
               <button 

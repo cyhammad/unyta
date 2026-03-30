@@ -40,9 +40,19 @@ export const SmoothScroll = ({ children }) => {
 
     document.addEventListener('click', handleClick);
 
+    // Global toggle for other components to lock scroll
+    window.toggleLenisScroll = (stop) => {
+      if (stop) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    };
+
     return () => {
       lenis.destroy();
       document.removeEventListener('click', handleClick);
+      delete window.toggleLenisScroll;
     };
   }, []);
 
