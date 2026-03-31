@@ -49,8 +49,8 @@ export const BrandOpportunities = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "circOut" }}
-          className="bg-[#F5F3F2] rounded-[20px] relative overflow-hidden flex flex-col items-center pt-10 order-2 lg:order-1 w-full"
-          style={{ maxWidth: "580.4px", minHeight: "340px" }}
+          className="bg-[#F5F3F2] rounded-[16px] relative overflow-hidden flex flex-col items-center pt-10 order-2 lg:order-1"
+          style={{ width: "570px", height: "445px", opacity: 1 }}
         >
           <div 
             className="relative w-full flex justify-center transition-all duration-500"
@@ -84,7 +84,7 @@ export const BrandOpportunities = () => {
               hidden: { opacity: 0, x: 20 },
               visible: { opacity: 1, x: 0 }
             }}
-            className="px-4 py-1.5 rounded-full bg-[#EADCDC] p-2 text-[#741717] text-[14px] font-sans font-medium mb-5"
+            className="px-4 py-1.5 rounded-full bg-[#EADCDC] p-2 text-[#741717] text-[12px] font-sans font-medium mb-5"
           >
             For Brands
           </motion.div>
@@ -120,7 +120,7 @@ export const BrandOpportunities = () => {
                   hidden: { opacity: 0, x: 20 },
                   visible: { opacity: 1, x: 0, transition: { delay: index * 0.1 } }
                 }}
-                className="flex items-center gap-x-4 px-4 py-3 rounded-full border border-[#E9E6E7] text-[#22000C] font-sans font-light text-[15px] hover:bg-[#F9F6F6] transition-colors group cursor-default"
+                className="flex items-center gap-x-4 px-4 py-3 rounded-full border border-[#E9E6E7] text-[#22000C] font-sans font-light text-[14px] hover:bg-[#F9F6F6] transition-colors group cursor-default"
               >
                 <div className="text-[#22000C]/60 group-hover:text-[#741717] transition-colors shrink-0">
                   {item.icon}
@@ -138,7 +138,7 @@ export const BrandOpportunities = () => {
             }}
             className="flex flex-col items-start gap-y-6"
           >
-            <p className="text-[#741717] text-[19px] md:text-[21px]">
+            <p className="text-[#741717] text-[18px]">
               Apply for Early Access
             </p>
             <button className="h-14 px-10 rounded-full bg-[#741717] text-white font-sans text-[16px] tracking-wide shadow-lg hover:bg-[#5a1212] transition-all hover:scale-105 active:scale-95">

@@ -17,10 +17,10 @@ export default function TermsPage() {
            transition={{ duration: 0.8, ease: "easeOut" }}
            className="text-center"
         >
-          <h1 className="font-cormorant text-[36px] md:text-[48px] text-[#22000C] mb-4">
+          <h1 className="font-cormorant text-[40px] font-semibold text-[#22000C]">
             Terms and Conditions
           </h1>
-          <p className="font-sans font-light text-[#22000C]/70 text-[14px] md:text-[15px] tracking-wide">
+          <p className="font-sans font-light text-[#22000C] text-[16px] tracking-wide">
             Effective Date: March 12, 2026 &nbsp;-&nbsp; Last Updated: March 12, 2026
           </p>
         </motion.div>
@@ -175,7 +175,7 @@ export default function TermsPage() {
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-4">17. Contact</h3>
             <p className="mb-4">For questions regarding these Terms, please contact:</p>
-            <p className="font-medium text-[#741717]">contact@unyta.co</p>
+            <p className="font-medium text-[#741717]">contact@joinunyta.com</p>
           </div>
 
           <div className="flex justify-center pt-12 pb-12">

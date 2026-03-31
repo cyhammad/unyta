@@ -146,8 +146,8 @@ export const Pricing = () => {
 
       {/* CARDS GRID */}
       <div 
-        className={`max-w-7xl mx-auto w-full px-6 grid grid-cols-1 gap-8 items-stretch justify-center ${
-            audience === "brands" ? "md:grid-cols-3" : "md:grid-cols-2 max-w-5xl"
+        className={`max-w-7xl mx-auto w-full px-6 grid grid-cols-1 gap-12 items-stretch justify-center justify-items-center ${
+            audience === "brands" ? "md:grid-cols-3" : "md:grid-cols-2 max-w-[900px]"
         }`}
       >
         {currentPlans.map((plan, index) => (
@@ -157,11 +157,12 @@ export const Pricing = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`rounded-[32px] flex flex-col items-center text-center border relative h-full transition-all ${
+            className={`rounded-[16px] flex flex-col items-center text-center border relative transition-all ${
               plan.isAdvanced 
-                ? "bg-[#EBE4E1] border-[#741717]/20 p-8 pt-16" 
-                : "bg-white border-stone-100 p-8 pt-16"
+                ? "bg-[#EBE4E1] border-[#541409] p-8 pt-12" 
+                : "bg-white border-stone-100 p-8 pt-12"
             }`}
+            style={audience === "creators" ? { width: "426px", height: "516px", opacity: 1 } : {}}
           >
             {plan.isAdvanced && (
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#3D1009] text-white px-6 py-2 rounded-full text-[13px] font-sans uppercase tracking-widest">

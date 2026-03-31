@@ -44,6 +44,16 @@ export const PlatformFeatures = () => {
         desc: "Earn rewards, badges and star reviews.",
         icon: Icons.featureRewards,
       },
+      {
+        title: "Interactive Map",
+        desc: "Find nearby experiences and global connections",
+        icon: Icons.discover,
+      },
+      {
+        title: "Strategic Support",
+        desc: "Book a personalised consulting from marketing experts",
+        icon: Icons.visionElevate,
+      },
     ],
     chat: [
       {
@@ -70,6 +80,16 @@ export const PlatformFeatures = () => {
         title: "Milestone Tracking",
         desc: "Get updates on collaboration progress as they happen.",
         icon: Icons.track,
+      },
+      {
+        title: "Interactive Map",
+        desc: "Find nearby experiences and global connections",
+        icon: Icons.discover,
+      },
+      {
+        title: "Strategic Support",
+        desc: "Book a personalised consulting from marketing experts",
+        icon: Icons.visionElevate,
       },
     ],
     match: [
@@ -98,6 +118,16 @@ export const PlatformFeatures = () => {
         desc: "Full visibility into a creator's reach and engagement history.",
         icon: Icons.featureRewards,
       },
+      {
+        title: "Interactive Map",
+        desc: "Find nearby experiences and global connections",
+        icon: Icons.discover,
+      },
+      {
+        title: "Strategic Support",
+        desc: "Book a personalised consulting from marketing experts",
+        icon: Icons.visionElevate,
+      },
     ],
     map: [
       {
@@ -124,6 +154,16 @@ export const PlatformFeatures = () => {
         title: "Event Mapping",
         desc: "Direct navigation to creator meetups and industry events.",
         icon: Icons.visionConnect,
+      },
+      {
+        title: "Interactive Map",
+        desc: "Find nearby experiences and global connections",
+        icon: Icons.discover,
+      },
+      {
+        title: "Strategic Support",
+        desc: "Book a personalised consulting from marketing experts",
+        icon: Icons.visionElevate,
       },
     ],
     collabs: [
@@ -152,6 +192,16 @@ export const PlatformFeatures = () => {
         desc: "Securely manage earnings and brand invoices through the app.",
         icon: Icons.track,
       },
+      {
+        title: "Interactive Map",
+        desc: "Find nearby experiences and global connections",
+        icon: Icons.discover,
+      },
+      {
+        title: "Strategic Support",
+        desc: "Book a personalised consulting from marketing experts",
+        icon: Icons.visionElevate,
+      },
     ],
     strategy: [
       {
@@ -179,6 +229,16 @@ export const PlatformFeatures = () => {
         desc: "Understand your brand's standing within your industry niche.",
         icon: Icons.featureRewards,
       },
+      {
+        title: "Interactive Map",
+        desc: "Find nearby experiences and global connections",
+        icon: Icons.discover,
+      },
+      {
+        title: "Strategic Support",
+        desc: "Book a personalised consulting from marketing experts",
+        icon: Icons.visionElevate,
+      },
     ],
   };
 
@@ -195,12 +255,12 @@ export const PlatformFeatures = () => {
   const currentImage = images[activeTab] || "/screen1.png";
 
   const tabStyles = {
-    home: { width: "400px", translate: "-70px" },
-    chat: { width: "400px", translate: "-70px" },
-    match: { width: "400px", translate: "-70px" },
-    map: { width: "300px", translate: "-20px" }, // Tweak BOTH width and translate specifically for Map here
-    collabs: { width: "400px", translate: "-70px" },
-    strategy: { width: "400px", translate: "-70px" }
+    home: { width: "380px", translate: "0px" },
+    chat: { width: "380px", translate: "0px" },
+    match: { width: "380px", translate: "0px" },
+    map: { width: "300px", translate: "0px" }, // Consistent sizing across all tabs
+    collabs: { width: "380px", translate: "0px" },
+    strategy: { width: "380px", translate: "0px" }
   };
 
   const currentStyle = tabStyles[activeTab] || tabStyles["home"];
@@ -215,7 +275,7 @@ export const PlatformFeatures = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center mb-8 md:mb-12 px-6"
       >
-        <h2 className="font-cormorant text-[36px] md:text-[48px] uppercase font-semibold text-[#0D0D12] mb-4">
+        <h2 className="font-cormorant text-[36px] md:text-[48px] uppercase font-semibold text-[#0D0D12] mb-5">
           Platform Features
         </h2>
         <p className="font-sans font-light text-[#22000C] text-[16px] md:text-xl max-w-2xl mx-auto">
@@ -254,8 +314,8 @@ export const PlatformFeatures = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: "circOut", delay: 0.1 }}
-          className="bg-[#741717] rounded-[20px] relative overflow-hidden flex flex-col items-center pt-10 w-full"
-          style={{ maxWidth: "580.4px", height: "auto", minHeight: "340px" }}
+          className="bg-[#741717] rounded-[20px] relative overflow-hidden flex flex-col items-center justify-center w-full lg:h-[700px] shadow-2xl"
+          style={{ maxWidth: "580.4px" }}
         >
           <div 
             className="relative w-full flex justify-center transition-all duration-500"
@@ -267,7 +327,7 @@ export const PlatformFeatures = () => {
               alt="Platform Scene"
               width={580}
               height={1160}
-              className="object-contain object-top transition-all duration-500 drop-shadow-2xl"
+              className="object-contain transition-all duration-500 drop-shadow-2xl"
               style={{ width: currentStyle.width, minWidth: currentStyle.width, height: "auto" }}
               priority
             />
@@ -283,7 +343,7 @@ export const PlatformFeatures = () => {
           variants={{
             visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } }
           }}
-          className="flex flex-col justify-between lg:h-[506px] w-full py-2 gap-3 md:gap-2"
+          className="flex flex-col justify-between w-full py-2 gap-3 md:gap-4 lg:h-[700px]"
         >
           {currentFeatures.map((feature, index) => (
             <motion.div
@@ -292,12 +352,12 @@ export const PlatformFeatures = () => {
                 hidden: { x: 40, opacity: 0 },
                 visible: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
               }}
-              className="bg-[#F9F6F6] rounded-[16px] p-4 flex items-center gap-x-6 hover:shadow-md transition-shadow cursor-default group"
+              className="bg-white rounded-[20px] p-4 flex items-center gap-x-6 hover:shadow-lg transition-all cursor-default group border border-black/[0.03]"
             >
               {/* ICON BADGE */}
               <div
-                className="w-[52px] h-[52px] shrink-0 rounded-2xl bg-gradient-to-br from-[#541409] to-[#3a0d05] flex items-center justify-center transition-transform group-hover:scale-110"
-                style={{ boxShadow: "0px -4px 8px 0px #FFFFFFA3 inset, 0px 4px 10px rgba(84, 20, 9, 0.25)" }}
+                className="w-[52px] h-[52px] shrink-0 rounded-2xl bg-gradient-to-br from-[#541409] to-[#3a0d05] flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg shadow-[#541409]/20"
+                style={{ boxShadow: "0px -4px 8px 0px #FFFFFFA3 inset" }}
               >
                 {feature.icon}
               </div>

@@ -17,10 +17,10 @@ export default function GuidelinesPage() {
            transition={{ duration: 0.8, ease: "easeOut" }}
            className="text-center"
         >
-          <h1 className="font-cormorant text-[36px] md:text-[48px] text-[#22000C] mb-4">
+          <h1 className="font-cormorant text-[40px] font-semibold text-[#22000C]">
             Community Guidelines
           </h1>
-          <p className="font-sans font-light text-[#22000C]/70 text-[14px] md:text-[15px] tracking-wide">
+          <p className="font-sans font-light text-[#22000C] text-[16px] tracking-wide">
             Effective Date: March 12, 2026 &nbsp;-&nbsp; Last Updated: March 12, 2026
           </p>
         </motion.div>

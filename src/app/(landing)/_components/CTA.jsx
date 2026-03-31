@@ -10,9 +10,9 @@ export const CTA = ({ onJoinCreator, onJoinBrand }) => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-4xl mx-auto flex flex-col items-center"
+        className="max-w-5xl mx-auto flex flex-col items-center"
       >
-        <h2 className="font-cormorant text-[36px] md:text-[44px] text-[#541409] mb-4 leading-tight">
+        <h2 className="font-cormorant font-semibold text-[36px] md:text-[44px] text-[#22000C] mb-4 leading-tight">
           Ready To Transform Your Collaboration Workflow?
         </h2>
         

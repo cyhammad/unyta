@@ -17,10 +17,10 @@ export default function PrivacyPage() {
            transition={{ duration: 0.8, ease: "easeOut" }}
            className="text-center"
         >
-          <h1 className="font-cormorant text-[36px] md:text-[48px] text-[#22000C] mb-4">
+          <h1 className="font-cormorant text-[40px] font-semibold text-[#22000C]">
             Privacy Policy
           </h1>
-          <p className="font-sans font-light text-[#22000C]/70 text-[14px] md:text-[15px] tracking-wide">
+          <p className="font-sans font-light text-[#22000C] text-[16px] tracking-wide">
             Effective Date: March 12, 2026 &nbsp;-&nbsp; Last Updated: March 12, 2026
           </p>
         </motion.div>
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             <p className="mb-4">For the purposes of applicable data protection laws, including the EU General Data Protection Regulation (GDPR) and the UK GDPR, the data controller responsible for processing your personal data is:</p>
             <p className="font-medium text-[#22000C]">Unyta Technologies FZ-LLC</p>
             <p>Dubai, United Arab Emirates</p>
-            <p>Contact: <span className="text-[#741717]">contact@unyta.co</span></p>
+            <p>Contact: <span className="text-[#741717]">contact@joinunyta.com</span></p>
           </div>
 
           <div>
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
               <li>Object to processing for legitimate reasons;</li>
               <li>Request data portability.</li>
             </ul>
-            <p>To exercise these rights, contact <span className="text-[#741717]">contact@unyta.co</span>. We may verify your identity before fulfilling any request.</p>
+            <p>To exercise these rights, contact <span className="text-[#741717]">contact@joinunyta.com</span>. We may verify your identity before fulfilling any request.</p>
           </div>
 
           <div>
@@ -188,7 +188,7 @@ export default function PrivacyPage() {
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-4">14. Contact Us</h3>
             <p className="mb-4">For any privacy questions or data requests, please contact:</p>
-            <p className="font-medium text-[#741717]">contact@unyta.co</p>
+            <p className="font-medium text-[#741717]">contact@joinunyta.com</p>
           </div>
 
           <div className="flex justify-center pt-12 pb-12">
