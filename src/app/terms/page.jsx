@@ -62,8 +62,8 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">4. Acceptable Use</h3>
-            <p className="mb-4">Users agree to:</p>
-            <ul className="list-disc pl-5 space-y-2">
+            <p className="font-medium">Users agree to:</p>
+            <ul className="">
               <li>Use Unyta only for lawful, professional purposes.</li>
               <li>Not misuse, spam, or harass other users.</li>
               <li>Not upload content that is defamatory, obscene, or infringes any rights.</li>
@@ -73,11 +73,11 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">5. Community Guidelines and Account Conduct</h3>
-            <p className="mb-6">
+            <p className="">
               To maintain mutual trust and transparency, all users must comply with Unyta&apos;s Community Guidelines, designed to protect both creators and brands and ensure reliable collaborations.
             </p>
             <p className="mb-4 font-medium">Key principles:</p>
-            <ul className="list-disc pl-5 space-y-4">
+            <ul className="space-y-">
               <li><span className="font-medium text-[#22000C]">Authenticity:</span> Influencer audiences must be genuine and organically engaged.</li>
               <li><span className="font-medium text-[#22000C]">Reliability:</span> Creators must honor bookings and deliver agreed content on time.</li>
               <li><span className="font-medium text-[#22000C]">Fairness:</span> Brands must send promised products or experiences as confirmed.</li>
@@ -124,8 +124,8 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">10. Limitation of Liability</h3>
-            <p className="mb-4 font-medium italic">To the fullest extent permitted by law:</p>
-            <ul className="list-disc pl-5 space-y-2">
+            <p className="font-medium">To the fullest extent permitted by law:</p>
+            <ul className="">
               <li>Unyta is not liable for indirect, incidental, or consequential damages.</li>
               <li>The Platform is provided &ldquo;as is&rdquo; without warranty of uninterrupted availability.</li>
               <li>Users assume all risks associated with use of the Platform.</li>
@@ -157,8 +157,8 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">15. Regional Compliance Clause</h3>
-            <p className="mb-4">Where required by local regulations, specific provisions of these Terms will be interpreted in accordance with applicable laws in the user&apos;s country of residence, including:</p>
-            <ul className="list-disc pl-5 space-y-2">
+            <p className="">Where required by local regulations, specific provisions of these Terms will be interpreted in accordance with applicable laws in the user&apos;s country of residence, including:</p>
+            <ul className="">
               <li>EU GDPR and consumer law.</li>
               <li>UK data protection and e-commerce regulations.</li>
               <li>UAE Federal Decree-Law No. 45 of 2021 (PDPL).</li>
