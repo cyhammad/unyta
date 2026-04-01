@@ -98,7 +98,7 @@ export const Pricing = () => {
         <h2 className="font-cormorant text-[36px] md:text-[48px] text-[#0D0D12] mb-3 leading-tight">
           Flexible Plans For Every Stage
         </h2>
-        <p className="font-sans font-light text-[#22000C]/70 text-[16px] md:text-[18px]">
+        <p className="font-sans font-light text-[#22000C]/70 text-base md:text-lg">
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
       </motion.div>
@@ -108,17 +108,15 @@ export const Pricing = () => {
         <div className="flex bg-[#F9F6F6] p-1.5 rounded-xl border border-stone-100 w-full sm:w-auto overflow-hidden">
           <button
             onClick={() => setAudience("creators")}
-            className={`${
-              audience === "creators" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
-            } rounded-lg px-8 py-2.5 text-[18px] tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
+            className={`${audience === "creators" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
+              } rounded-lg px-8 py-2.5 text-lg tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
           >
             For Creators
           </button>
           <button
             onClick={() => setAudience("brands")}
-            className={`${
-              audience === "brands" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
-            } rounded-lg px-8 py-2.5 text-[18px] tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
+            className={`${audience === "brands" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
+              } rounded-lg px-8 py-2.5 text-lg tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
           >
             For Brands
           </button>
@@ -127,17 +125,15 @@ export const Pricing = () => {
         <div className="flex bg-[#F9F6F6] p-1.5 rounded-xl border border-stone-100 w-full sm:w-auto overflow-hidden">
           <button
             onClick={() => setCycle("monthly")}
-            className={`${
-              cycle === "monthly" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
-            } rounded-lg px-8 py-2.5 text-[18px] tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
+            className={`${cycle === "monthly" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
+              } rounded-lg px-8 py-2.5 text-lg tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
           >
             Monthly
           </button>
           <button
             onClick={() => setCycle("annual")}
-            className={`${
-              cycle === "annual" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
-            } rounded-lg px-8 py-2.5 text-[18px] tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
+            className={`${cycle === "annual" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"
+              } rounded-lg px-8 py-2.5 text-lg tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
           >
             Annual
           </button>
@@ -145,10 +141,9 @@ export const Pricing = () => {
       </div>
 
       {/* CARDS GRID */}
-      <div 
-        className={`max-w-7xl mx-auto w-full px-6 grid grid-cols-1 gap-12 items-stretch justify-center justify-items-center ${
-            audience === "brands" ? "md:grid-cols-3" : "md:grid-cols-2 max-w-[900px]"
-        }`}
+      <div
+        className={`max-w-7xl mx-auto w-full px-6 grid grid-cols-1 gap-12 items-stretch justify-center justify-items-center ${audience === "brands" ? "md:grid-cols-3" : "md:grid-cols-2 max-w-[900px]"
+          }`}
       >
         {currentPlans.map((plan, index) => (
           <motion.div
@@ -157,12 +152,11 @@ export const Pricing = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`rounded-[16px] flex flex-col items-center text-center border relative transition-all ${
-              plan.isAdvanced 
-                ? "bg-[#EBE4E1] border-[#541409] p-8 pt-12" 
+            className={`rounded-[16px] flex flex-col items-center text-center border relative transition-all ${plan.isAdvanced
+                ? "bg-[#EBE4E1] border-[#541409] p-8 pt-12"
                 : "bg-white border-stone-100 p-8 pt-12"
-            }`}
-            style={audience === "creators" ? { width: "426px", height: "516px", opacity: 1 } : {}}
+              }`}
+            style={audience === "creators" ? { width: "426px", opacity: 1 } : {}}
           >
             {plan.isAdvanced && (
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#3D1009] text-white px-6 py-2 rounded-full text-[13px] font-sans uppercase tracking-widest">
@@ -190,19 +184,18 @@ export const Pricing = () => {
 
             <ul className="flex flex-col gap-y-3.5 items-start w-full mb-10 px-2 mt-4">
               {plan.features.map((f, i) => (
-                <li key={i} className="flex items-start gap-x-3 text-[14px] text-[#22000C] font-sans font-light text-left leading-tight">
-                  <svg className="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#741717" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <li key={i} className="flex items-start gap-x-3 text-[16px] text-[#541409] font-medium tracking-wide font-sans text-left leading-tight">
+                  <svg className="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#741717" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                   {f}
                 </li>
               ))}
             </ul>
 
-            <button 
-              className={`mt-auto w-full py-3.5 rounded-full font-sans text-[15px] tracking-wide transition-all ${
-                plan.isAdvanced 
-                  ? "bg-[#741717] text-white hover:bg-[#5a1212] hover:scale-[1.02] active:scale-95" 
+            <button
+              className={`mt-auto w-full py-3.5 rounded-full font-sans text-[15px] tracking-wide transition-all ${plan.isAdvanced
+                  ? "bg-[#741717] text-white hover:bg-[#5a1212] hover:scale-[1.02] active:scale-95"
                   : "border border-[#741717] text-[#741717] hover:bg-[#741717]/5"
-              }`}
+                }`}
             >
               {plan.buttonText}
             </button>

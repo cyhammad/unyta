@@ -57,7 +57,7 @@ export const WhyChooseUs = () => {
           <h2 className="font-cormorant text-[36px] md:text-[48px] uppercase font-medium text-white mb-4">
             WHY CHOOSE US?
           </h2>
-          <p className="font-sans font-light text-white/70 text-[16px] md:text-[18px]">
+          <p className="font-sans font-light text-white/70 text-base md:text-lg">
             Trust and transparency are at the core of Unyta.
           </p>
         </motion.div>

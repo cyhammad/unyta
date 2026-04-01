@@ -60,7 +60,7 @@ export const WhyUnyta = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="text-[#22000C] font-sans font-extralight text-[16px] md:text-[18px] text-center max-w-2xl mb-12 opacity-80 px-6"
+          className="text-[#22000C] font-sans font-extralight text-base md:text-lg text-center max-w-2xl mb-12 opacity-80 px-6"
         >
           We believe in making collaborations simpler, more transparent, and rewarding.
         </motion.p>

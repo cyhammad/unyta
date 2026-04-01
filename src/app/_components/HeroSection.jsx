@@ -40,7 +40,7 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                         hidden: { y: 20, opacity: 0 },
                         visible: { y: 0, opacity: 1, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
                     }}
-                    className="mx-auto mt-2 max-w-lg font-light text-[#22000C] text-[18px] font-sans sm:text-xl"
+                    className="mx-auto mt-2 max-w-lg font-light text-[#22000C] text-lg font-sans sm:text-xl"
                 >
                     Swipe to match. Unlock exclusive collaborations, gifted products, and
                     curated experiences.
@@ -53,7 +53,7 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                     }}
                     className="mt-6 flex flex-col items-center gap-y-3"
                 >
-                    <p className="text-[18px] md:text-[20px] text-[#741717]">
+                    <p className="text-lg md:text-[20px] text-[#741717]">
                         Apply for Early Access
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">

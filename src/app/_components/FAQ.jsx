@@ -40,7 +40,7 @@ export const FAQ = () => {
           <h2 className="font-cormorant text-[36px] md:text-[48px] text-[#0D0D12] mb-3 leading-tight uppercase">
             Frequently Asked Questions
           </h2>
-          <p className="font-sans font-light text-[#22000C]/70 text-[16px] md:text-[18px]">
+          <p className="font-sans font-light text-[#22000C]/70 text-base md:text-lg">
             Everything you need to know about Unyta.
           </p>
         </motion.div>
@@ -60,7 +60,7 @@ export const FAQ = () => {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left group transition-colors hover:bg-black/[0.02]"
               >
-                <span className="font-cormorant font-semibold text-[#741717] text-[18px] pr-4 leading-tight">
+                <span className="font-cormorant font-semibold text-[#741717] text-lg pr-4 leading-tight">
                   {faq.q}
                 </span>
                 <span className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>

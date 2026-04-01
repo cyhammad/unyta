@@ -16,11 +16,11 @@ export const CTA = ({ onJoinCreator, onJoinBrand }) => {
           Ready To Transform Your Collaboration Workflow?
         </h2>
         
-        <p className="font-sans font-light text-[#22000C]/80 text-[16px] md:text-[18px] mb-8 max-w-2xl">
+        <p className="font-sans font-light text-[#22000C] text-base md:text-xl mb-8 max-w-[588px]">
           Join a global community where creators and brands build meaningful partnerships.
         </p>
 
-        <span className="font-sans font-medium text-[#741717] text-[15px] mb-6 tracking-wide">
+        <span className="font-sans font-medium text-[#741717] text-xl mb-6 tracking-wide">
           Apply for Early Access
         </span>
 

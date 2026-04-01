@@ -77,7 +77,7 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 <h2 className="font-cormorant text-[24px] sm:text-[28px] md:text-[32px] leading-tight text-[#22000C] uppercase tracking-wider mb-2">
                   Join Unyta as a Brand
                 </h2>
-                <p className="font-sans font-medium text-[#541409] text-[13px] sm:text-[14px] md:text-[16px] max-w-[500px] leading-relaxed px-4 sm:px-0">
+                <p className="font-sans font-medium text-[#541409] text-[13px] sm:text-[14px] md:text-base max-w-[500px] leading-relaxed px-4 sm:px-0">
                   Match with top-tier creators and launch authentic partnerships that drive real engagement.
                 </p>
               </div>

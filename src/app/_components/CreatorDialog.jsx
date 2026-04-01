@@ -78,7 +78,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                 <h2 className="font-cormorant text-[24px] sm:text-[28px] md:text-[32px] leading-tight text-[#22000C] uppercase tracking-wider mb-1">
                   Join Unyta as a Creator
                 </h2>
-                <p className="font-sans font-light text-[#741717] text-[13px] sm:text-[14px] md:text-[16px] max-w-[500px] leading-relaxed px-4 sm:px-0">
+                <p className="font-sans font-light text-[#741717] text-[13px] sm:text-[14px] md:text-base max-w-[500px] leading-relaxed px-4 sm:px-0">
                   Get access to exclusive partnerships, gifted products, and complimentary experiences.
                 </p>
               </div>

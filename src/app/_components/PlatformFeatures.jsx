@@ -278,7 +278,7 @@ export const PlatformFeatures = () => {
         <h2 className="font-cormorant text-[36px] md:text-[48px] uppercase font-semibold text-[#0D0D12] mb-5">
           Platform Features
         </h2>
-        <p className="font-sans font-light text-[#22000C] text-[16px] md:text-xl max-w-2xl mx-auto">
+        <p className="font-sans font-light text-[#22000C] text-base md:text-xl max-w-2xl mx-auto">
           Everything you need to discover, connect, and collaborate — all in one place.
         </p>
       </motion.div>
@@ -295,7 +295,7 @@ export const PlatformFeatures = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-5 md:px-8 py-2 md:py-3.5 rounded-xl text-[16px] md:text-[18px] font-cormorant font-semibold tracking-wide transition-all duration-300 whitespace-nowrap flex-shrink-0 snap-center ${
+            className={`px-5 md:px-8 py-2 md:py-3.5 rounded-xl text-base md:text-lg font-cormorant font-semibold tracking-wide transition-all duration-300 whitespace-nowrap flex-shrink-0 snap-center ${
               activeTab === tab.id
                 ? "bg-[#541409] text-white shadow-lg"
                 : "text-[#22000C] hover:text-[#541409]"

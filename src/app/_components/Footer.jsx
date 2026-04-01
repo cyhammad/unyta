@@ -40,7 +40,7 @@ export const Footer = () => {
         <div className="w-full md:w-1/2 grid grid-cols-3 gap-6 md:gap-8">
           {/* PRODUCT */}
           <div className="flex flex-col items-start">
-            <h4 className="font-sans font-medium text-[13px] sm:text-[16px] md:text-[18px] mb-4 sm:mb-6 text-warm-white">Product</h4>
+            <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-warm-white">Product</h4>
             <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-[12px] sm:text-[15px]">
               <Link href="/features" className="hover:underline transition-colors">Features</Link>
               <Link href="/pricing" className="hover:underline transition-colors">Pricing</Link>
@@ -51,7 +51,7 @@ export const Footer = () => {
 
           {/* LEGAL */}
           <div className="flex flex-col items-start">
-            <h4 className="font-sans font-medium text-[13px] sm:text-[16px] md:text-[18px] mb-4 sm:mb-6 text-white">Legal</h4>
+            <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-white">Legal</h4>
             <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-[12px] sm:text-[15px]">
               <Link href="/privacy" className="hover:underline transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:underline transition-colors">Terms & Conditions</Link>
@@ -61,7 +61,7 @@ export const Footer = () => {
 
           {/* SUPPORT */}
           <div className="flex flex-col items-start">
-            <h4 className="font-sans font-medium text-[13px] sm:text-[16px] md:text-[18px] mb-4 sm:mb-6 text-white">Support</h4>
+            <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-white">Support</h4>
             <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-[12px] sm:text-[15px]">
               <Link href="/contact" className="hover:underline transition-colors">Contact Us</Link>
             </div>

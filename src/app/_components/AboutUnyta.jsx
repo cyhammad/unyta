@@ -20,7 +20,7 @@ export const AboutUnyta = () => {
 
   return (
     <section className="w-full py-24 bg-[#F9F6F6] flex flex-col items-center overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center text-center">
+      <div className="max-w-[1096px] mx-auto px-6 w-full flex flex-col items-center text-center">
         
         {/* LOGO */}
         <motion.div 
@@ -49,7 +49,7 @@ export const AboutUnyta = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          className="font-cormorant text-[36px] md:text-[42px] uppercase text-[#741717] mb-8 tracking-wide"
+          className="font-cormorant font-semibold text-[36px] md:text-[42px] uppercase text-[#0D0D12] mb-8"
         >
           ABOUT UNYTA
         </motion.h2>
@@ -60,7 +60,7 @@ export const AboutUnyta = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="font-sans font-medium text-[#22000C] text-[16px] md:text-[17px] max-w-4xl mb-8 leading-relaxed"
+          className="font-sans font-medium text-[#22000C] text-base md:text-[17px] max-w-4xl mb-8 leading-relaxed"
         >
           &ldquo;We created Unyta to make collaborations simpler, more transparent, and rewarding. Our vision: a world where creators and brands connect authentically.&rdquo;
         </motion.p>
@@ -70,7 +70,7 @@ export const AboutUnyta = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="font-sans font-light text-[#22000C]/80 text-[15px] md:text-[16px] max-w-4xl mb-10 leading-relaxed"
+          className="font-sans font-light text-[#22000C] text-[15px] md:text-base max-w-4xl mb-10 leading-relaxed"
         >
           Founded with a shared passion for influencer collaborations, Unyta brings together a community of vetted creators and forward-thinking brands. We believe the best collaborations come from genuine connections — and that&apos;s exactly what we&apos;re building.
         </motion.p>
@@ -80,7 +80,7 @@ export const AboutUnyta = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          className="font-sans font-medium text-[#22000C] text-[15px] md:text-[16px] max-w-4xl mb-16 leading-relaxed"
+          className="font-sans font-medium text-[#22000C] text-[15px] md:text-base max-w-4xl mb-16 leading-relaxed"
         >
           Unyta supports creators and brands globally, with curated experience collaborations soon available in:<br/>
           <span className="text-[#741717] leading-loose">London, Paris, Milan, Dubai.</span>

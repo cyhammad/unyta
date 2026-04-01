@@ -57,7 +57,7 @@ export const GettingStarted = () => {
           <h2 className="font-cormorant text-[36px] md:text-[48px] uppercase font-semibold text-[#0D0D12] mb-4">
             GETTING STARTED
           </h2>
-          <p className="font-sans font-light text-[#22000C]/70 text-[16px] md:text-[18px] max-w-2xl mx-auto">
+          <p className="font-sans font-light text-[#22000C]/70 text-base md:text-lg max-w-2xl mx-auto">
             Join Unyta in four simple steps and start your collaboration journey today.
           </p>
         </motion.div>

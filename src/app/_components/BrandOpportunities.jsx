@@ -57,7 +57,7 @@ export const BrandOpportunities = () => {
             style={{ transform: "translateY(-70px)" }}
           >
              <Image 
-                src="/screen6.png" 
+                src="/screen8.png" 
                 alt="Brand Strategy Mockup" 
                 width={580}
                 height={1160}
@@ -106,7 +106,7 @@ export const BrandOpportunities = () => {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
             }}
-            className="text-[#22000C] font-sans font-light text-[17px] md:text-[18px] leading-relaxed mb-5 max-w-md"
+            className="text-[#22000C] font-sans font-light text-[17px] md:text-lg leading-relaxed mb-5"
           >
             Launch campaigns with trusted creators. Access insights, streamline communication, and earn authentic reviews.
           </motion.p>
@@ -120,7 +120,7 @@ export const BrandOpportunities = () => {
                   hidden: { opacity: 0, x: 20 },
                   visible: { opacity: 1, x: 0, transition: { delay: index * 0.1 } }
                 }}
-                className="flex items-center gap-x-4 px-4 py-3 rounded-full border border-[#E9E6E7] text-[#22000C] font-sans font-light text-[14px] hover:bg-[#F9F6F6] transition-colors group cursor-default"
+                className="flex items-center gap-x-4 px-4 py-2.25 rounded-full border border-[#E9E6E7] text-[#22000C] font-sans font-light text-[14px] hover:bg-[#F9F6F6] transition-colors group cursor-default"
               >
                 <div className="text-[#22000C]/60 group-hover:text-[#741717] transition-colors shrink-0">
                   {item.icon}
@@ -138,10 +138,10 @@ export const BrandOpportunities = () => {
             }}
             className="flex flex-col items-start gap-y-6"
           >
-            <p className="text-[#741717] text-[18px]">
+            <p className="text-[#741717] text-lg">
               Apply for Early Access
             </p>
-            <button className="h-14 px-10 rounded-full bg-[#741717] text-white font-sans text-[16px] tracking-wide shadow-lg hover:bg-[#5a1212] transition-all hover:scale-105 active:scale-95">
+            <button className="h-14 px-10 rounded-full bg-[#741717] text-white font-sans text-base tracking-wide shadow-lg hover:bg-[#5a1212] transition-all hover:scale-105 active:scale-95">
               Join as a Brand
             </button>
           </motion.div>

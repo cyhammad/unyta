@@ -70,7 +70,7 @@ export const HowItWorks = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-        className="text-[#22000C] text-[16px] md:text-[18px] tracking-wide font-sans font-light text-center max-w-3xl mb-8"
+        className="text-[#22000C] text-base md:text-lg tracking-wide font-sans font-light text-center max-w-3xl mb-8"
       >
         Whether you are a creator or a brand, Unyta makes collaboration effortless and rewarding.
       </motion.p>
@@ -85,13 +85,13 @@ export const HowItWorks = () => {
       >
         <button 
           onClick={() => setActiveTab("creators")}
-          className={`${activeTab === "creators" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"} rounded-lg px-2 sm:px-8 py-2.5 text-[15px] sm:text-[18px] tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
+          className={`${activeTab === "creators" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"} rounded-lg px-2 sm:px-8 py-2.5 text-[15px] sm:text-lg tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
         >
           For Creators
         </button>
         <button 
           onClick={() => setActiveTab("brands")}
-          className={`${activeTab === "brands" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"} rounded-lg px-2 sm:px-8 py-2.5 text-[15px] sm:text-[18px] tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
+          className={`${activeTab === "brands" ? "bg-[#541409] text-white shadow-sm" : "text-stone-600 hover:text-[#541409]"} rounded-lg px-2 sm:px-8 py-2.5 text-[15px] sm:text-lg tracking-wide transition-all font-cormorant w-1/2 sm:w-auto whitespace-nowrap`}
         >
           For Brands
         </button>
