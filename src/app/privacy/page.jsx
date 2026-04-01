@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "../(landing)/_components/Footer";
+import { Footer } from "../_components/Footer";
 import { motion } from "motion/react";
 
 export default function PrivacyPage() {
@@ -202,8 +202,6 @@ export default function PrivacyPage() {
 
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

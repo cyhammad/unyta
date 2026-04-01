@@ -61,7 +61,7 @@ export const HowItWorks = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="font-cormorant text-[36px] md:text-[40px] uppercase tracking-widest text-[#0D0D12] mb-2 font-semibold text-center"
+        className="font-cormorant text-[36px] md:text-[40px] uppercase text-[#0D0D12] mb-2 font-semibold text-center"
       >
         How It Works
       </motion.h2>
@@ -118,7 +118,7 @@ export const HowItWorks = () => {
             className="bg-[#F9F6F6] rounded-[16px] p-6 flex flex-col items-start gap-y-4 shadow-sm"
           >
             <div
-              className="w-[52px] h-[52px] rounded-full bg-gradient-to-br from-[#541409] to-[#3a0d05] flex items-center justify-center"
+              className="w-[52px] h-[52px] rounded-[14px] bg-gradient-to-br from-[#541409] to-[#3a0d05] flex items-center justify-center"
               style={{ boxShadow: "0px -4px 8px 0px #FFFFFFA3 inset, 0px 4px 10px rgba(84, 20, 9, 0.25)" }}
             >
               {item.icon}

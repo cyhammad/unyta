@@ -2,6 +2,8 @@ import { Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import "@/app/globals.css";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "./_components/Footer";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -50,7 +52,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${cormorantGaramond.variable} ${satoshi.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <SmoothScroll>
+          <Navbar />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>
