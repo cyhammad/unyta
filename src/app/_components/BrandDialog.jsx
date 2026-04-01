@@ -4,10 +4,43 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
+import toast from "react-hot-toast";
+import {
+  submitBrandApplication,
+  getApplicationErrorMessage,
+  passwordMeetsPolicy,
+} from "@/lib/firebase/applications";
 
 export const BrandDialog = ({ isOpen, onClose }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [instagramHandle, setInstagramHandle] = useState("");
+  const [websiteUrl, setWebsiteUrl] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+
+  const hasMinLen = password.length >= 8;
+  const hasNumber = /\d/.test(password);
+  const hasSymbol = /[^a-zA-Z0-9]/.test(password);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setFullName("");
+      setEmail("");
+      setInstagramHandle("");
+      setWebsiteUrl("");
+      setPassword("");
+      setConfirmPassword("");
+      setSubmitError(null);
+      setSubmitting(false);
+      setShowPassword(false);
+      setShowConfirmPassword(false);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.toggleLenisScroll) {
@@ -19,6 +52,39 @@ export const BrandDialog = ({ isOpen, onClose }) => {
       }
     };
   }, [isOpen]);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setSubmitError(null);
+    if (!fullName.trim() || !email.trim() || !instagramHandle.trim()) {
+      setSubmitError("Please fill in all required fields.");
+      return;
+    }
+    if (!passwordMeetsPolicy(password)) {
+      setSubmitError("Password must be at least 8 characters and include a number and a symbol.");
+      return;
+    }
+    if (password !== confirmPassword) {
+      setSubmitError("Passwords do not match.");
+      return;
+    }
+    setSubmitting(true);
+    try {
+      await submitBrandApplication({
+        fullName,
+        email,
+        instagramHandle,
+        websiteUrl,
+        password,
+      });
+      toast.success("Thanks! Your brand application was submitted.");
+      onClose();
+    } catch (err) {
+      setSubmitError(getApplicationErrorMessage(err));
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   return (
     <AnimatePresence>
@@ -83,11 +149,20 @@ export const BrandDialog = ({ isOpen, onClose }) => {
               </div>
 
               {/* FORM */}
-              <div className="flex flex-col gap-3">
+              <form id="brand-early-access-form" className="flex flex-col gap-3" onSubmit={handleSubmit} noValidate>
+                {submitError && (
+                  <p className="rounded-2xl bg-red-50 px-4 py-2 text-center text-xs text-red-800 sm:text-sm" role="alert">
+                    {submitError}
+                  </p>
+                )}
                 {/* FULL NAME */}
                 <div className="relative">
                   <input 
                     type="text" 
+                    name="fullName"
+                    autoComplete="name"
+                    value={fullName}
+                    onChange={(ev) => setFullName(ev.target.value)}
                     placeholder="Full Name"
                     className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
@@ -97,6 +172,10 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 <div className="relative">
                   <input 
                     type="email" 
+                    name="email"
+                    autoComplete="email"
+                    value={email}
+                    onChange={(ev) => setEmail(ev.target.value)}
                     placeholder="Business Email"
                     className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
@@ -106,6 +185,10 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 <div className="relative">
                   <input 
                     type="text" 
+                    name="instagramHandle"
+                    autoComplete="username"
+                    value={instagramHandle}
+                    onChange={(ev) => setInstagramHandle(ev.target.value)}
                     placeholder="Instagram Handle"
                     className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
@@ -115,6 +198,10 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 <div className="relative">
                   <input 
                     type="url" 
+                    name="websiteUrl"
+                    autoComplete="url"
+                    value={websiteUrl}
+                    onChange={(ev) => setWebsiteUrl(ev.target.value)}
                     placeholder="Website URL"
                     className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
@@ -125,10 +212,15 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                   <div className="relative">
                     <input 
                       type={showPassword ? "text" : "password"} 
+                      name="password"
+                      autoComplete="new-password"
+                      value={password}
+                      onChange={(ev) => setPassword(ev.target.value)}
                       placeholder="Password"
                       className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                     />
                     <button 
+                      type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-5 sm:right-6 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 transition-colors"
                     >
@@ -142,21 +234,26 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                   
                   {/* STRENGTH BAR */}
                   <div className="w-full h-[4px] bg-stone-100 rounded-full overflow-hidden">
-                    <div className="w-[10%] h-full bg-[#741717] rounded-full" />
+                    <div
+                      className="h-full bg-[#741717] rounded-full transition-all duration-300"
+                      style={{
+                        width: `${Math.min(100, (hasMinLen ? 34 : 0) + (hasNumber ? 33 : 0) + (hasSymbol ? 33 : 0))}%`,
+                      }}
+                    />
                   </div>
 
                   {/* REQUIREMENTS */}
                   <div className="flex flex-col items-start gap-2 pt-1">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-4 h-4 rounded-full border border-stone-300" />
+                      <div className={`w-4 h-4 rounded-full border ${hasMinLen ? "border-[#741717] bg-[#741717]" : "border-stone-300"}`} />
                       <span className="font-sans font-light text-stone-800 text-[13px]">8 characters minimum</span>
                     </div>
                     <div className="flex items-center gap-2.5">
-                      <div className="w-4 h-4 rounded-full border border-stone-300" />
+                      <div className={`w-4 h-4 rounded-full border ${hasNumber ? "border-[#741717] bg-[#741717]" : "border-stone-300"}`} />
                       <span className="font-sans font-light text-stone-800 text-[13px]">a number</span>
                     </div>
                     <div className="flex items-center gap-2.5">
-                      <div className="w-4 h-4 rounded-full border border-stone-300" />
+                      <div className={`w-4 h-4 rounded-full border ${hasSymbol ? "border-[#741717] bg-[#741717]" : "border-stone-300"}`} />
                       <span className="font-sans font-light text-stone-800 text-[13px]">a symbol</span>
                     </div>
                   </div>
@@ -166,10 +263,15 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 <div className="relative">
                   <input 
                     type={showConfirmPassword ? "text" : "password"} 
+                    name="confirmPassword"
+                    autoComplete="new-password"
+                    value={confirmPassword}
+                    onChange={(ev) => setConfirmPassword(ev.target.value)}
                     placeholder="Confirm Password"
                     className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
                   <button 
+                    type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                     className="absolute right-5 sm:right-6 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 transition-colors"
                   >
@@ -180,12 +282,17 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                     )}
                   </button>
                 </div>
-              </div>
+              </form>
 
               {/* CTAS */}
               <div className="flex flex-col gap-3 mt-auto">
-                <button className="w-full h-[52px] sm:h-[60px] rounded-full bg-[#741717] text-white font-sans font-medium text-[15px] sm:text-[17px] hover:bg-[#541409] transition-all shadow-lg active:scale-[0.98]">
-                  Apply for Early Access
+                <button
+                  type="submit"
+                  form="brand-early-access-form"
+                  disabled={submitting}
+                  className="w-full h-[52px] sm:h-[60px] rounded-full bg-[#741717] text-white font-sans font-medium text-[15px] sm:text-[17px] hover:bg-[#541409] transition-all shadow-lg active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
+                >
+                  {submitting ? "Submitting…" : "Apply for Early Access"}
                 </button>
                 <p className="font-sans font-normal text-stone-700 text-[12px] sm:text-[13px] text-center pb-2 sm:pb-0">
                   By signing up, you agree to Unyta&apos;s{" "}
