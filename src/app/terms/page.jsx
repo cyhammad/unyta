@@ -39,7 +39,7 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">1. Definitions</h3>
-            <ul className="list-disc pl-5 space-y-2">
+            <ul className="">
               <li>&ldquo;Platform&rdquo; &mdash; the Unyta mobile app, website, and related services.</li>
               <li>&ldquo;User&rdquo; &mdash; any individual or organization using Unyta, including brands and creators.</li>
               <li>&ldquo;Content&rdquo; &mdash; all materials, posts, images, or data shared on the Platform.</li>
@@ -55,8 +55,8 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">3. Account Registration</h3>
-            <p className="mb-4">Users must register to access Unyta&apos;s features.</p>
-            <p className="mb-4">You are responsible for maintaining the confidentiality of your account credentials and for any activity that occurs under your account.</p>
+            <p className="">Users must register to access Unyta&apos;s features.</p>
+            <p className="">You are responsible for maintaining the confidentiality of your account credentials and for any activity that occurs under your account.</p>
             <p>Unyta may suspend or terminate accounts that provide false information or violate these Terms.</p>
           </div>
 
@@ -83,8 +83,8 @@ export default function TermsPage() {
               <li><span className="font-medium text-[#22000C]">Fairness:</span> Brands must send promised products or experiences as confirmed.</li>
               <li><span className="font-medium text-[#22000C]">Professional conduct:</span> Users must maintain respectful and lawful communication at all times.</li>
             </ul>
-            <p className="mt-6 italic">
-              Enforcement: Unyta reserves the right to issue warnings, temporarily suspend, or permanently remove any account that repeatedly violates these principles, fails to meet obligations, or engages in fraudulent or abusive behavior. Serious or repeated non-compliance may lead to permanent account termination.
+            <p className="">
+            <span className="font-medium text-[#22000C]">Enforcement:</span> Unyta reserves the right to issue warnings, temporarily suspend, or permanently remove any account that repeatedly violates these principles, fails to meet obligations, or engages in fraudulent or abusive behavior. Serious or repeated non-compliance may lead to permanent account termination.
             </p>
           </div>
 
@@ -93,27 +93,27 @@ export default function TermsPage() {
             <p className="mb-6">
               Unyta facilitates gifting and collaboration opportunities but is not a party to any agreement between users. Unyta does not guarantee the performance, delivery or outcome of any collaboration and does not verify the accuracy of user representations, audience metrics, or content performance.
             </p>
-            <p className="mb-4 font-medium">Users are responsible for:</p>
-            <ul className="list-disc pl-5 space-y-2">
+            <p className="font-medium">Users are responsible for:</p>
+            <ul className="">
               <li>Complying with all applicable advertising, consumer, and tax laws.</li>
               <li>Delivering on disclosure obligations for terms truthfully.</li>
               <li>Resolving disputes directly between themselves.</li>
             </ul>
-            <p className="mt-4">Unyta bears no liability for losses, delays, or disputes arising from collaborations.</p>
+            <p className="">Unyta bears no liability for losses, delays, or disputes arising from collaborations.</p>
           </div>
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">7. Fees and Subscriptions</h3>
-            <p className="mb-4">Access to certain features may require payment of subscription fees.</p>
-            <p className="mb-4">Users agree to pay all applicable charges according to their selected plan.</p>
-            <p className="mb-4">Failure to pay may result in restricted access or account suspension.</p>
-            <p className="mb-4">All payments are non-refundable unless required by law.</p>
+            <p className="">Access to certain features may require payment of subscription fees.</p>
+            <p className="">Users agree to pay all applicable charges according to their selected plan.</p>
+            <p className="">Failure to pay may result in restricted access or account suspension.</p>
+            <p className="">All payments are non-refundable unless required by law.</p>
             <p>Unyta reserves the right to modify subscription pricing or introduce new fees at any time. Users will be notified in advance of any material pricing changes.</p>
           </div>
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">8. Intellectual Property</h3>
-            <p className="mb-4">All trademarks, software and materials on the Platform belong to Unyta or its licensors.</p>
+            <p className="">All trademarks, software and materials on the Platform belong to Unyta or its licensors.</p>
             <p>Users retain ownership of their own content but grant Unyta a non-exclusive, worldwide, royalty-free license to display, distribute, and promote it within the Platform and related communications. This license allows Unyta to display user content within the Platform, marketing materials, and promotional communications related to the Platform.</p>
           </div>
 
@@ -144,14 +144,14 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">13. Termination</h3>
-            <p className="mb-4">Unyta may suspend or terminate any account at its discretion, with or without notice, if it believes a violation of these Terms or applicable law has occurred.</p>
+            <p className="">Unyta may suspend or terminate any account at its discretion, with or without notice, if it believes a violation of these Terms or applicable law has occurred.</p>
             <p>Upon termination, all rights granted to you will cease immediately.</p>
           </div>
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">14. Governing Law and Jurisdiction</h3>
-            <p className="mb-4">These Terms are governed by and construed in accordance with the laws of the United Arab Emirates.</p>
-            <p className="mb-4">To the extent permitted by applicable law, any dispute, claim, or controversy arising out of or relating to these Terms or the use of the Platform shall be subject to the exclusive jurisdiction of the courts of Dubai, United Arab Emirates.</p>
+            <p className="">These Terms are governed by and construed in accordance with the laws of the United Arab Emirates.</p>
+            <p className="">To the extent permitted by applicable law, any dispute, claim, or controversy arising out of or relating to these Terms or the use of the Platform shall be subject to the exclusive jurisdiction of the courts of Dubai, United Arab Emirates.</p>
             <p>Users residing in other jurisdictions, including the European Union or the United Kingdom, may also benefit from any mandatory consumer protections granted under the laws of their country of residence.</p>
           </div>
 
@@ -163,7 +163,7 @@ export default function TermsPage() {
               <li>UK data protection and e-commerce regulations.</li>
               <li>UAE Federal Decree-Law No. 45 of 2021 (PDPL).</li>
             </ul>
-            <p className="mt-4 italic">Nothing in these Terms limits any rights you have under these laws.</p>
+            <p className="">Nothing in these Terms limits any rights you have under these laws.</p>
           </div>
 
           <div>
@@ -173,8 +173,8 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">17. Contact</h3>
-            <p className="mb-4">For questions regarding these Terms, please contact:</p>
-            <p className="font-medium text-[#741717]">contact@joinunyta.com</p>
+            <p className="">For questions regarding these Terms, please contact:</p>
+            <p className="">contact@joinunyta.com</p>
           </div>
 
           <div className="flex justify-center pt-12 pb-12">

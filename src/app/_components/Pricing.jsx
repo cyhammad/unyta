@@ -165,12 +165,12 @@ export const Pricing = () => {
             )}
 
             <h3 className="font-cormorant text-[28px] text-[#0D0D12] mb-1">{plan.title}</h3>
-            <p className="font-sans font-light text-[14px] leading-relaxed text-[#22000C]/60 mb-6 px-2">
+            <p className="font-sans font-medium text-[14px] leading-relaxed text-[#4A4A58] mb-6 px-2">
               {plan.desc}
             </p>
 
-            <div className={`mb-3 flex items-baseline gap-1 ${plan.showSave ? "mt-2" : "mt-0"}`}>
-              <span className="font-cormorant text-[36px] md:text-[42px] text-[#0D0D12]">
+            <div className={`mb-1 flex items-baseline gap-1 ${plan.showSave ? "mt-2" : "mt-0"}`}>
+              <span className="font-cormorant text-[36px] md:text-[42px] font-semibold text-[#0D0D12]">
                 €{plan.price}
               </span>
               <span className="text-[15px] text-[#22000C]/60 truncate">{plan.suffix}</span>
@@ -192,7 +192,7 @@ export const Pricing = () => {
             </ul>
 
             <button
-              className={`mt-auto w-full py-3.5 rounded-full font-sans text-[15px] tracking-wide transition-all ${plan.isAdvanced
+              className={`mt-auto w-full py-3.5 rounded-full font-sans text-xl tracking-wide transition-all ${plan.isAdvanced
                   ? "bg-[#741717] text-white hover:bg-[#5a1212] hover:scale-[1.02] active:scale-95"
                   : "border border-[#741717] text-[#741717] hover:bg-[#741717]/5"
                 }`}

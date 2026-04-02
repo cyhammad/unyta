@@ -126,7 +126,7 @@ export default function PrivacyPage() {
               <li>Brands or creators for collaboration purposes;</li>
               <li>Legal or public authorities when required by law.</li>
             </ul>
-            <p className="italic">We do not sell or rent personal data to any third party.</p>
+            <p className="">We do not sell or rent personal data to any third party.</p>
           </div>
 
           <div>

@@ -45,7 +45,7 @@ export default function GuidelinesPage() {
 
           <div>
             <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Rescheduling Policy</h2>
-            <div className="space-y-2">
+            <div className="">
               <p>For fixed date and time experiences, reschedule up to 48h before and cancel up to 24h before start.</p>
               <p>For date range experiences, reschedule within the original window and available slots.</p>
               <p>For flexible experiences, reschedule anytime until expiry.</p>
@@ -75,7 +75,7 @@ export default function GuidelinesPage() {
 
           <div>
             <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Collaborator Conditions</h2>
-            <p className="mb-2">
+            <p className="">
               Creator must post within 1 week of receiving the item, and within 2 days after completion of experience. Must visibly tag the brand, showcasing the product, experience, or location clearly.
             </p>
             <p>
