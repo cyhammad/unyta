@@ -164,7 +164,7 @@ export const Pricing = () => {
               </div>
             )}
 
-            <h3 className="font-cormorant text-[28px] text-[#0D0D12] mb-1">{plan.title}</h3>
+            <h3 className="font-cormorant text-[28px] text-[#191D23] mb-1">{plan.title}</h3>
             <p className="font-sans font-medium text-[14px] leading-relaxed text-[#4A4A58] mb-6 px-2">
               {plan.desc}
             </p>
@@ -173,7 +173,7 @@ export const Pricing = () => {
               <span className="font-cormorant text-[36px] md:text-[42px] font-semibold text-[#0D0D12]">
                 €{plan.price}
               </span>
-              <span className="text-[15px] text-[#22000C]/60 truncate">{plan.suffix}</span>
+              <span className="text-[15px] text-[#541409] truncate">{plan.suffix}</span>
             </div>
 
             {plan.showSave && (
