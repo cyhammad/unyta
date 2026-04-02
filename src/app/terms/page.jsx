@@ -173,7 +173,7 @@ export default function TermsPage() {
 
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">17. Contact</h3>
-            <p className="">For questions regarding these Terms, please contact:</p>
+            <p className="">For questions regarding these Terms, please contact</p>
             <p className="">contact@joinunyta.com</p>
           </div>
 
