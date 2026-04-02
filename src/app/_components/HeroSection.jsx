@@ -114,7 +114,7 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "circOut", delay: 0.55 }}
                 >
-                    <div className="w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] translate-y-[-40px] md:translate-y-[-120px]">
+                    <div className="w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] translate-y-[-40px] md:translate-y-[-142px]">
                         <Image
                             src="/right.png"
                             alt="Unyta Right Phone"
