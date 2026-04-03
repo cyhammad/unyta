@@ -33,10 +33,10 @@ export default function Home() {
       <WhyUnyta />
       <CreatorOpportunities />
       <BrandOpportunities />
-      <Pricing />
+      {/* <Pricing /> */}
       <GettingStarted />
       <WhyChooseUs />
-      <FAQ />
+      {/* <FAQ /> */}
       <AboutUnyta />
       <CTA
         onJoinCreator={() => setIsCreatorModalOpen(true)}

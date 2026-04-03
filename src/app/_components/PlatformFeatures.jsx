@@ -268,7 +268,7 @@ export const PlatformFeatures = () => {
   return (
     <section id="features" className="w-full py-24 bg-white flex flex-col items-center overflow-hidden">
       {/* HEADER */}
-      <motion.div 
+      <motion.div
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -282,9 +282,10 @@ export const PlatformFeatures = () => {
           Everything you need to discover, connect, and collaborate — all in one place.
         </p>
       </motion.div>
-
-      {/* TABS */}
-      <motion.div 
+      <div className="w-full flex flex-col px-4 items-center justify-center">
+        <Image src="/platform-features.svg" alt="Platform Features" width={1036} height={945} />
+      </div>
+      {/* <motion.div 
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -305,10 +306,7 @@ export const PlatformFeatures = () => {
           </button>
         ))}
       </motion.div>
-
-      {/* CONTENT REGION */}
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center justify-items-center">
-        {/* LEFT: IMAGE BOX */}
         <motion.div 
           initial={{ x: -40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -334,9 +332,8 @@ export const PlatformFeatures = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT: FEATURES LIST */}
         <motion.div 
-          key={activeTab} // Retriggers animation array on tab change
+          key={activeTab}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
@@ -354,7 +351,6 @@ export const PlatformFeatures = () => {
               }}
               className="bg-white rounded-[20px] p-4 flex items-center gap-x-6 hover:shadow-lg transition-all cursor-default group border border-black/[0.03]"
             >
-              {/* ICON BADGE */}
               <div
                 className="w-[52px] h-[52px] shrink-0 rounded-2xl bg-gradient-to-br from-[#541409] to-[#3a0d05] flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg shadow-[#541409]/20"
                 style={{ boxShadow: "0px -4px 8px 0px #FFFFFFA3 inset" }}
@@ -362,7 +358,6 @@ export const PlatformFeatures = () => {
                 {feature.icon}
               </div>
 
-              {/* TEXT */}
               <div className="flex flex-col">
                 <h3 className="font-cormorant text-[22px] font-semibold text-[#741717] leading-tight mb-1">
                   {feature.title}
@@ -374,7 +369,7 @@ export const PlatformFeatures = () => {
             </motion.div>
           ))}
         </motion.div>
-      </div>
+      </div> */}
     </section>
   );
 };
