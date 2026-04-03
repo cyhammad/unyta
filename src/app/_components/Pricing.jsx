@@ -170,7 +170,7 @@ export const Pricing = () => {
             </p>
 
             <div className={`mb-1 flex items-baseline gap-1 ${plan.showSave ? "mt-2" : "mt-0"}`}>
-              <span className="font-cormorant text-[36px] md:text-[42px] font-semibold text-[#0D0D12]">
+              <span className="font-cormorant text-[36px] md:text-[42px] font-semibold text-[#541409]">
                 €{plan.price}
               </span>
               <span className="text-[15px] text-[#541409] truncate">{plan.suffix}</span>

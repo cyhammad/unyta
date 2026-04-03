@@ -165,7 +165,7 @@ export default function PrivacyPage() {
               <li>Object to processing for legitimate reasons;</li>
               <li>Request data portability.</li>
             </ul>
-            <p>To exercise these rights, contact <span className="text-[#741717]">contact@joinunyta.com</span>. We may verify your identity before fulfilling any request.</p>
+            <p>To exercise these rights, contact: <span className="text-[#741717]">contact@joinunyta.com</span>. We may verify your identity before fulfilling any request.</p>
           </div>
 
           <div>

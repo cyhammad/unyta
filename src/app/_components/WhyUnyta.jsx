@@ -49,7 +49,7 @@ export const WhyUnyta = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          className="font-cormorant text-[36px] md:text-[40px] uppercase text-[#741717] mb-2"
+          className="font-cormorant text-[36px] tracking-tight md:text-[40px] uppercase text-[#0D0D12] mb-2"
         >
           WHY UNYTA?
         </motion.h2>
