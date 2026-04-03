@@ -70,7 +70,7 @@ export const Footer = () => {
       </div>
       {/* COPYRIGHT */}
       <div className="flex flex-col w-full max-w-7xl md:flex-row justify-between items-center gap-4">
-        <p className="font-sans font-light text-[13px] md:text-[14px]">
+        <p className="font-sans font-light text-[13px] md:text-sm">
           © 2026 Unyta. All rights reserved.
         </p>
       </div>

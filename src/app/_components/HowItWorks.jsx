@@ -124,10 +124,10 @@ export const HowItWorks = () => {
               {item.icon}
             </div>
             <div className="flex flex-col gap-y-3">
-              <h3 className="font-cormorant text-[24px] font-semibold text-[#22000C] leading-snug">
+              <h3 className="font-cormorant text-2xl font-semibold text-[#22000C] leading-snug">
                 {item.title}
               </h3>
-              <p className={`font-sans font-light text-[#22000C] tracking-wide ${index === 3 ? "text-[14px]" : "text-[15px]"}`}>
+              <p className={`font-sans font-light text-[#22000C] tracking-wide ${index === 3 ? "text-sm" : "text-[15px]"}`}>
                 {item.desc}
               </p>
             </div>

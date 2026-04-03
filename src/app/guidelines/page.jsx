@@ -30,21 +30,21 @@ export default function GuidelinesPage() {
         <div className="space-y-6">
 
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Audience Authenticity Checks</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Audience Authenticity Checks</h2>
             <p>
               We ensure that influencers&apos; audiences are genuine and engaged, helping protect brand reputation and fostering trust between brands and creators.
             </p>
           </div>
 
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">No Show Policy</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">No Show Policy</h2>
             <p>
               If an influencer misses two bookings in a row, they will be unable to book any future experiences for the following month, promoting accountability.
             </p>
           </div>
 
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Rescheduling Policy</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Rescheduling Policy</h2>
             <div className="">
               <p>For fixed date and time experiences, reschedule up to 48h before and cancel up to 24h before start.</p>
               <p>For date range experiences, reschedule within the original window and available slots.</p>
@@ -53,28 +53,28 @@ export default function GuidelinesPage() {
           </div>
 
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Content Delivery Delays</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Content Delivery Delays</h2>
             <p>
               In the case of two delays in content delivery, influencers will be unable to receive complimentary products for the next month, ensuring timely and reliable content creation.
             </p>
           </div>
 
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Brand Non-Compliance</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Brand Non-Compliance</h2>
             <p>
               If a brand fails to send products or cancels an experience, they will be restricted from matching with creators for the next week, maintaining fairness and consistency in partnerships.
             </p>
           </div>
 
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Creator Non-Compliance</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Creator Non-Compliance</h2>
             <p>
               If content is not delivered at all for two brand collaborations within a one-month period, the influencer&apos;s membership will be suspended.
             </p>
           </div>
 
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Collaborator Conditions</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Collaborator Conditions</h2>
             <p className="">
               Creator must post within 1 week of receiving the item, and within 2 days after completion of experience. Must visibly tag the brand, showcasing the product, experience, or location clearly.
             </p>

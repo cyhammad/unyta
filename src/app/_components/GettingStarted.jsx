@@ -101,7 +101,7 @@ export const GettingStarted = () => {
                 </div>
 
                 {/* TEXT CONTENT */}
-                <h3 className="font-cormorant text-[24px] font-semibold text-[#741717] mb-2 leading-tight">
+                <h3 className="font-cormorant text-2xl font-semibold text-[#741717] mb-2 leading-tight">
                   {step.title}
                 </h3>
                 <p className="font-sans font-light text-[#22000C] text-[15px] leading-relaxed max-w-[240px]">

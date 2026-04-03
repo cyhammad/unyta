@@ -76,7 +76,7 @@ export const WhyUnyta = () => {
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 + index * 0.15 }}
               className="bg-white w-[384px]  rounded-[16px] px-4 py-5 border border-[#EADCDC] flex flex-col items-start gap-y-2"
             >
-              <h3 className="font-cormorant text-[24px] font-semibold text-[#741717] group-hover:text-[#541409] transition-colors">
+              <h3 className="font-cormorant text-2xl font-semibold text-[#741717] group-hover:text-[#541409] transition-colors">
                 {card.title}
               </h3>
               <p className="font-sans font-light text-[#22000C]/70 text-[15px] leading-[1.6]">

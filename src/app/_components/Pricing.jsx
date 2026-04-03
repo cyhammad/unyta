@@ -152,9 +152,9 @@ export const Pricing = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`rounded-[16px] flex flex-col items-center text-center border relative transition-all ${plan.isAdvanced
+            className={`rounded-[24px] flex flex-col items-center text-center border relative transition-all ${plan.isAdvanced
                 ? "bg-[#EBE4E1] border-[#541409] p-8 pt-12"
-                : "bg-white border-stone-100 p-8 pt-12"
+                : "bg-white border-[#CECECE] p-8 pt-12"
               }`}
             style={audience === "creators" ? { width: "426px", opacity: 1 } : {}}
           >
@@ -165,7 +165,7 @@ export const Pricing = () => {
             )}
 
             <h3 className="font-cormorant text-[28px] text-[#191D23] mb-1">{plan.title}</h3>
-            <p className="font-sans font-medium text-[14px] leading-relaxed text-[#4A4A58] mb-6 px-2">
+            <p className="font-sans font-medium text-sm leading-relaxed text-[#4A4A58] mb-6 px-2">
               {plan.desc}
             </p>
 

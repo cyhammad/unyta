@@ -113,7 +113,7 @@ export const CreatorOpportunities = () => {
                   hidden: { opacity: 0, x: -20 },
                   visible: { opacity: 1, x: 0, transition: { delay: index * 0.1 } }
                 }}
-                className="flex items-center w-fit gap-x-2 pl-3 pr-4 py-2.25 rounded-full border border-[#E9E6E7] text-[#22000C] font-sans font-medium text-[14px] hover:bg-[#F9F6F6] transition-colors group cursor-default"
+                className="flex items-center w-fit gap-x-2 pl-3 pr-4 py-2.25 rounded-full border border-[#E9E6E7] text-[#22000C] font-sans font-medium text-sm hover:bg-[#F9F6F6] transition-colors group cursor-default"
               >
                 <div className="text-[#22000C] group-hover:text-[#741717] transition-colors shrink-0">
                   {item.icon}

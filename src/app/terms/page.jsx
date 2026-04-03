@@ -31,7 +31,7 @@ export default function TermsPage() {
         <div className="space-y-6">
           
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Unyta Terms & Conditions</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Unyta Terms & Conditions</h2>
             <p>
               These Terms & Conditions (&ldquo;Terms&rdquo;) govern your access to and use of the Unyta Platform, including all services, features, and content. By creating an account or using Unyta, you agree to be bound by these Terms.
             </p>

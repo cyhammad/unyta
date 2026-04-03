@@ -113,7 +113,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                 "w-full h-[95dvh] rounded-t-[24px] rounded-b-none pt-6 px-5 pb-6 gap-4",
                 /* Tablet: centered card */
                 "sm:w-[480px] sm:h-auto sm:max-h-[90vh] sm:rounded-[24px] sm:pt-8 sm:px-8 sm:pb-8 sm:gap-4",
-                "lg:w-[590px] lg:h-[780px] lg:max-h-[92vh] lg:rounded-[24px] lg:pt-8 lg:px-8 lg:pb-8 lg:gap-4 lg:mt-4",
+                "lg:w-[712px] lg:h-[780px] lg:max-h-[92vh] lg:rounded-[24px] lg:pt-8 lg:px-8 lg:pb-8 lg:gap-4 lg:mt-4",
               ].join(" ")}
               data-lenis-prevent
             >
@@ -138,10 +138,10 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                     filter: "brightness(0)" 
                   }}
                 />
-                <h2 className="font-cormorant text-[24px] sm:text-[28px] md:text-[32px] leading-tight text-[#22000C] uppercase tracking-wider mb-1">
+                <h2 className="font-cormorant font-medium text-2xl sm:text-[28px] md:text-[40px] leading-tight text-[#22000C] uppercase tracking-tight mb-1">
                   Join Unyta as a Creator
                 </h2>
-                <p className="font-sans font-light text-[#741717] text-[13px] sm:text-[14px] md:text-base max-w-[500px] leading-relaxed px-4 sm:px-0">
+                <p className="font-sans font-medium tracking-tight text-[#741717] text-[13px] sm:text-sm md:text-base lg:text-xl max-w-[550px] leading-relaxed px-4 sm:px-0">
                   Get access to exclusive partnerships, gifted products, and complimentary experiences.
                 </p>
               </div>

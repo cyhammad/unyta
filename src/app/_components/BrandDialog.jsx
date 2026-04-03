@@ -100,6 +100,7 @@ export const BrandDialog = ({ isOpen, onClose }) => {
           />
 
           {/* POSITIONING WRAPPER */}
+          {/* Mobile: full-screen centered | Tablet: centered | Desktop: top-right */}
           <div className="fixed inset-0 z-[110] flex items-end sm:items-center lg:items-start lg:justify-end p-0 sm:p-6 pointer-events-none">
 
             {/* DIALOG CONTAINER */}
@@ -112,10 +113,10 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 "relative pointer-events-auto flex flex-col overflow-y-auto scrollbar-hide",
                 "bg-white shadow-2xl border border-stone-200",
                 /* Mobile: full-width bottom sheet */
-                "w-full h-[95dvh] rounded-t-[24px] rounded-b-none pt-6 px-5 pb-6 gap-3",
+                "w-full h-[95dvh] rounded-t-[24px] rounded-b-none pt-6 px-5 pb-6 gap-4",
                 /* Tablet: centered card */
-                "sm:w-[480px] sm:h-auto sm:max-h-[90vh] sm:rounded-[24px] sm:pt-8 sm:px-8 sm:pb-8 sm:gap-3",
-                "lg:w-[590px] lg:h-[840px] lg:max-h-[92vh] lg:rounded-[24px] lg:pt-8 lg:px-8 lg:pb-8 lg:gap-4 lg:mt-4",
+                "sm:w-[480px] sm:h-auto sm:max-h-[90vh] sm:rounded-[24px] sm:pt-8 sm:px-8 sm:pb-8 sm:gap-4",
+                "lg:w-[712px] lg:h-[780px] lg:max-h-[92vh] lg:rounded-[24px] lg:pt-8 lg:px-8 lg:pb-8 lg:gap-4 lg:mt-4",
               ].join(" ")}
               data-lenis-prevent
             >
@@ -140,10 +141,10 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                     filter: "brightness(0)" 
                   }}
                 />
-                <h2 className="font-cormorant text-[24px] sm:text-[28px] md:text-[32px] leading-tight text-[#22000C] uppercase tracking-wider mb-2">
+                <h2 className="font-cormorant font-medium text-2xl sm:text-[28px] md:text-[40px] leading-tight text-[#22000C] uppercase tracking-tight mb-1">
                   Join Unyta as a Brand
                 </h2>
-                <p className="font-sans font-medium text-[#541409] text-[13px] sm:text-[14px] md:text-base max-w-[500px] leading-relaxed px-4 sm:px-0">
+                <p className="font-sans font-medium tracking-tight text-[#741717] text-[13px] sm:text-sm md:text-base lg:text-xl max-w-[550px] leading-relaxed px-4 sm:px-0">
                   Match with top-tier creators and launch authentic partnerships that drive real engagement.
                 </p>
               </div>
@@ -190,8 +191,11 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                     value={instagramHandle}
                     onChange={(ev) => setInstagramHandle(ev.target.value)}
                     placeholder="Instagram Handle"
-                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
+                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
+                  <button type="button" className="absolute right-5 sm:right-6 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 transition-colors" aria-label="Instagram handle">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  </button>
                 </div>
 
                 {/* WEBSITE URL */}

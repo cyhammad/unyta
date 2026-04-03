@@ -77,10 +77,10 @@ export const WhyChooseUs = () => {
                 {item.icon}
               </div>
               <div className="flex flex-col">
-                <h3 className="font-cormorant text-[20px] md:text-[24px] font-medium text-white mb-2 leading-tight">
+                <h3 className="font-cormorant text-[20px] md:text-2xl font-medium text-white mb-2 leading-tight">
                   {item.title}
                 </h3>
-                <p className="font-sans font-light text-[#E8E8E8] text-[14px] md:text-[15px] leading-relaxed">
+                <p className="font-sans font-light text-[#E8E8E8] text-sm md:text-[15px] leading-relaxed">
                   {item.desc}
                 </p>
               </div>

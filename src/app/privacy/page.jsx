@@ -32,7 +32,7 @@ export default function PrivacyPage() {
         <div className="space-y-6">
           
           <div>
-            <h2 className="font-cormorant text-[24px] text-[#741717] font-semibold mb-3 leading-tight">Unyta Privacy Policy</h2>
+            <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Unyta Privacy Policy</h2>
             <p className="">
               Unyta (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;) values your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you access or use the Unyta platform (&ldquo;Platform&rdquo;), including our website, mobile app, and related services.
             </p>
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
               <li>Object to processing for legitimate reasons;</li>
               <li>Request data portability.</li>
             </ul>
-            <p>To exercise these rights, contact: <span className="text-[#741717]">contact@joinunyta.com</span>. We may verify your identity before fulfilling any request.</p>
+            <p>To exercise these rights, contact: contact@joinunyta.com. We may verify your identity before fulfilling any request.</p>
           </div>
 
           <div>

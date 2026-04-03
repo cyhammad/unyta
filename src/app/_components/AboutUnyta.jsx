@@ -49,7 +49,7 @@ export const AboutUnyta = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          className="font-cormorant font-semibold text-[36px] md:text-[42px] uppercase text-[#0D0D12] mb-8"
+          className="font-cormorant font-semibold text-[36px] md:text-[42px] uppercase text-[#571111] mb-8"
         >
           ABOUT UNYTA
         </motion.h2>
