@@ -162,7 +162,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                     value={fullName}
                     onChange={(ev) => setFullName(ev.target.value)}
                     placeholder="Full Name"
-                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
+                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-[#C7C7CB] px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
                 </div>
 
@@ -175,7 +175,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                     value={email}
                     onChange={(ev) => setEmail(ev.target.value)}
                     placeholder="Email Address"
-                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
+                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-[#C7C7CB] px-5 sm:px-6 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
                 </div>
 
@@ -188,7 +188,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                     value={instagramHandle}
                     onChange={(ev) => setInstagramHandle(ev.target.value)}
                     placeholder="Instagram Handle"
-                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
+                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-[#C7C7CB] px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
                   <button type="button" className="absolute right-5 sm:right-6 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 transition-colors" aria-label="Instagram handle">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
@@ -205,7 +205,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                       value={password}
                       onChange={(ev) => setPassword(ev.target.value)}
                       placeholder="Password"
-                      className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
+                      className="w-full h-[44px] sm:h-[48px] rounded-full border border-[#C7C7CB] px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                     />
                     <button 
                       type="button"
@@ -221,7 +221,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                   </div>
                   
                   {/* STRENGTH BAR */}
-                  <div className="w-full h-[4px] bg-stone-100 rounded-full overflow-hidden">
+                  <div className="w-full h-[8px] bg-[#F1E8E8] rounded-full overflow-hidden">
                     <div
                       className="h-full bg-[#741717] rounded-full transition-all duration-300"
                       style={{
@@ -233,16 +233,16 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                   {/* REQUIREMENTS */}
                   <div className="flex flex-col items-start gap-2 pt-1">
                     <div className="flex items-center gap-2.5">
-                      <div className={`w-4 h-4 rounded-full border ${hasMinLen ? "border-[#741717] bg-[#741717]" : "border-stone-300"}`} />
-                      <span className="font-sans font-light text-stone-800 text-[13px]">8 characters minimum</span>
+                      <div className={`w-4 h-4 rounded-full border ${hasMinLen ? "border-[#741717] bg-[#741717]" : "border-[#9D9AA4]"}`} />
+                      <span className="font-sans font-light text-[#22000C] text-sm">8 characters minimum</span>
                     </div>
                     <div className="flex items-center gap-2.5">
-                      <div className={`w-4 h-4 rounded-full border ${hasNumber ? "border-[#741717] bg-[#741717]" : "border-stone-300"}`} />
-                      <span className="font-sans font-light text-stone-800 text-[13px]">a number</span>
+                      <div className={`w-4 h-4 rounded-full border ${hasNumber ? "border-[#741717] bg-[#741717]" : "border-[#9D9AA4]"}`} />
+                      <span className="font-sans font-light text-[#22000C] text-sm">a number</span>
                     </div>
                     <div className="flex items-center gap-2.5">
-                      <div className={`w-4 h-4 rounded-full border ${hasSymbol ? "border-[#741717] bg-[#741717]" : "border-stone-300"}`} />
-                      <span className="font-sans font-light text-stone-800 text-[13px]">a symbol</span>
+                      <div className={`w-4 h-4 rounded-full border ${hasSymbol ? "border-[#741717] bg-[#741717]" : "border-[#9D9AA4]"}`} />
+                      <span className="font-sans font-light text-[#22000C] text-sm">a symbol</span>
                     </div>
                   </div>
                 </div>
@@ -256,7 +256,7 @@ export const CreatorDialog = ({ isOpen, onClose }) => {
                     value={confirmPassword}
                     onChange={(ev) => setConfirmPassword(ev.target.value)}
                     placeholder="Confirm Password"
-                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-stone-300 px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
+                    className="w-full h-[44px] sm:h-[48px] rounded-full border border-[#C7C7CB] px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
                   <button 
                     type="button"
