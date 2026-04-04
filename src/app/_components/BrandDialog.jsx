@@ -189,7 +189,14 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                     name="instagramHandle"
                     autoComplete="username"
                     value={instagramHandle}
-                    onChange={(ev) => setInstagramHandle(ev.target.value)}
+                    onChange={(ev) => {
+                      const v = ev.target.value;
+                      if (v === "") {
+                        setInstagramHandle("");
+                        return;
+                      }
+                      setInstagramHandle("@" + v.replace(/^@+/, ""));
+                    }}
                     placeholder="Instagram Handle"
                     className="w-full h-[44px] sm:h-[48px] rounded-full border border-[#C7C7CB] px-5 sm:px-6 pr-12 sm:pr-14 font-sans font-normal text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#741717] transition-all text-xs sm:text-sm"
                   />
@@ -241,7 +248,7 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                     <div
                       className="h-full bg-[#741717] rounded-full transition-all duration-300"
                       style={{
-                        width: `${Math.min(100, (hasMinLen ? 34 : 0) + (hasNumber ? 33 : 0) + (hasSymbol ? 33 : 0))}%`,
+                        width: `${Math.min(100, (hasMinLen ? 34 : 1) + (hasNumber ? 33 : 1) + (hasSymbol ? 33 : 1))}%`,
                       }}
                     />
                   </div>

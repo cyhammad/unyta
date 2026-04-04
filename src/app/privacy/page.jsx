@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             <p className="">For the purposes of applicable data protection laws, including the EU General Data Protection Regulation (GDPR) and the UK GDPR, the data controller responsible for processing your personal data is:</p>
             <p className="">Unyta Technologies FZ-LLC</p>
             <p>Dubai, United Arab Emirates</p>
-            <p>Contact: <span className="text-[#741717]">contact@joinunyta.com</span></p>
+            <p>Contact: contact@joinunyta.com</p>
           </div>
 
           <div>
