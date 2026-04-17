@@ -4,8 +4,7 @@ import { HowItWorks } from "./_components/HowItWorks";
 import { Vision } from "./_components/Vision";
 import { PlatformFeatures } from "./_components/PlatformFeatures";
 import { WhyUnyta } from "./_components/WhyUnyta";
-import { CreatorOpportunities } from "./_components/CreatorOpportunities";
-import { BrandOpportunities } from "./_components/BrandOpportunities";
+import { Opportunities } from "./_components/Opportunities";
 import { Pricing } from "./_components/Pricing";
 import { GettingStarted } from "./_components/GettingStarted";
 import { WhyChooseUs } from "./_components/WhyChooseUs";
@@ -31,8 +30,7 @@ export default function Home() {
       <Vision />
       <PlatformFeatures />
       <WhyUnyta />
-      <CreatorOpportunities />
-      <BrandOpportunities />
+      <Opportunities />
       {/* <Pricing /> */}
       <GettingStarted />
       <WhyChooseUs />

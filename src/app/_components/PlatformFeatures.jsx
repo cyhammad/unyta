@@ -273,7 +273,7 @@ export const PlatformFeatures = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center mb-8 md:mb-12 px-6"
+        className="text-center px-6"
       >
         <h2 className="font-cormorant text-[36px] md:text-[48px] uppercase font-semibold text-[#0D0D12] mb-5">
           Platform Features
@@ -283,7 +283,7 @@ export const PlatformFeatures = () => {
         </p>
       </motion.div>
       <div className="w-full flex flex-col px-4 items-center justify-center">
-        <Image src="/platform-features.svg" alt="Platform Features" width={1036} height={945} />
+        <Image src="/platform.png" alt="Platform Features" width={1036} height={945} />
       </div>
       {/* <motion.div 
         initial={{ y: 20, opacity: 0 }}
