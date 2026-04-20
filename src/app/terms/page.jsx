@@ -7,14 +7,14 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      
+
       {/* HEADER SECTION */}
       <section className="w-full h-[283px] bg-[#EEE8E6] flex flex-col items-center justify-center pt-20 px-6">
         <motion.div
-           initial={{ y: 20, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-           className="text-center"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center"
         >
           <h1 className="font-cormorant text-[40px] font-semibold text-[#22000C]">
             Terms and Conditions
@@ -27,9 +27,9 @@ export default function TermsPage() {
 
       {/* CONTENT REGION */}
       <section className="max-w-[1200px] mx-auto py-24 px-6 md:px-12 font-sans font-light text-[#22000C]/90 leading-relaxed text-[15px] md:text-base">
-        
+
         <div className="space-y-6">
-          
+
           <div>
             <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Unyta Terms & Conditions</h2>
             <p>
@@ -49,7 +49,7 @@ export default function TermsPage() {
           <div>
             <h3 className="font-cormorant text-[22px] text-[#741717] font-semibold mb-3">2. Eligibility</h3>
             <p>
-              You must be at least 18 years old (or the minimum age required by law in your country of residence) to use Unyta. If you are under 18 years old, you may only use the Platform with the consent or supervision of a parent or legal guardian.
+              You must be at least 18 years old (or the minimum age required by law in your country of residence) to use Unyta. <br />If you are under 18 years old, you may only use the Platform with the consent or supervision of a parent or legal guardian.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ export default function TermsPage() {
               <li><span className="font-medium text-[#22000C]">Professional conduct:</span> Users must maintain respectful and lawful communication at all times.</li>
             </ul>
             <p className="">
-            <span className="font-medium text-[#22000C]">Enforcement:</span> Unyta reserves the right to issue warnings, temporarily suspend, or permanently remove any account that repeatedly violates these principles, fails to meet obligations, or engages in fraudulent or abusive behavior. Serious or repeated non-compliance may lead to permanent account termination.
+              <span className="font-medium text-[#22000C]">Enforcement:</span> Unyta reserves the right to issue warnings, temporarily suspend, or permanently remove any account that repeatedly violates these principles, fails to meet obligations, or engages in fraudulent or abusive behavior. Serious or repeated non-compliance may lead to permanent account termination.
             </p>
           </div>
 
@@ -178,8 +178,8 @@ export default function TermsPage() {
           </div>
 
           <div className="flex justify-center pt-12 pb-12">
-            <a 
-              href="/" 
+            <a
+              href="/"
               className="px-10 py-3 rounded-full border border-[#741717] text-[#741717] font-sans font-medium hover:bg-[#741717]/5 transition-all text-[15px]"
             >
               Back to homepage

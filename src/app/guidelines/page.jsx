@@ -76,10 +76,7 @@ export default function GuidelinesPage() {
           <div>
             <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Collaborator Conditions</h2>
             <p className="">
-              Creator must post within 1 week of receiving the item, and within 2 days after completion of experience. Must visibly tag the brand, showcasing the product, experience, or location clearly.
-            </p>
-            <p>
-              Brand must ship product within 72 hours after collaboration confirmation.
+              Creator must post within 1 week of receiving the item, and within 2 days after completion of experience. Must visibly tag the brand, showcasing the product, experience, or location clearly. Brand must ship product within 72 hours after collaboration confirmation.
             </p>
           </div>
 
