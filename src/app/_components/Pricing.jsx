@@ -177,7 +177,7 @@ export const Pricing = () => {
             </div>
 
             {plan.showSave && (
-              <div className="mb-6 px-3 py-1 rounded-full border border-stone-200 bg-white text-[12px] text-stone-500 font-sans">
+              <div className="mb-6 px-3 py-1 rounded-full border border-stone-200 bg-white text-xs text-stone-500 font-sans">
                 Save {plan.savePercent}
               </div>
             )}

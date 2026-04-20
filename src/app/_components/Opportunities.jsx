@@ -139,7 +139,7 @@ export const Opportunities = () => {
                 hidden: { opacity: 0, x: -20 },
                 visible: { opacity: 1, x: 0 },
               }}
-              className="px-4 py-1.5 rounded-full bg-[#EADCDC] text-[#741717] text-[12px] font-sans font-medium mb-5"
+              className="px-4 py-1.5 rounded-full bg-[#EADCDC] text-[#741717] text-xs font-sans font-medium mb-5"
             >
               For Creators
             </motion.div>
@@ -217,7 +217,7 @@ export const Opportunities = () => {
                 hidden: { opacity: 0, x: 20 },
                 visible: { opacity: 1, x: 0 },
               }}
-              className="px-4 py-1.5 rounded-full bg-[#EADCDC] text-[#741717] text-[12px] font-sans font-medium mb-5"
+              className="px-4 py-1.5 rounded-full bg-[#EADCDC] text-[#741717] text-xs font-sans font-medium mb-5"
             >
               For Brands
             </motion.div>

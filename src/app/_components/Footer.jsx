@@ -6,7 +6,7 @@ import Image from "next/image";
 export const Footer = () => {
   return (
     <footer className="flex flex-col w-full bg-[#541409] text-warm-white lg:h-[366px] pt-14 pb-6 gap-12 items-center px-6">
-      <div className="flex flex-col w-full max-w-7xl md:flex-row justify-between items-start gap-12 md:gap-0 h-full">
+      <div className="flex flex-col w-full max-w-[1200px] md:flex-row justify-between items-start gap-12 md:gap-0 h-full">
         <div className="w-full md:w-1/2 flex flex-col items-start gap-3 pr-4">
           <Image
             src="/footer-logo.png"
@@ -15,7 +15,7 @@ export const Footer = () => {
             height={43}
             className="object-contain"
           />
-          <p className="font-sans font-light text-[15px] leading-relaxed max-w-[320px]">
+          <p className="font-sans font-light text-base leading-relaxed max-w-[320px]">
             The members only community where creators and brands connect for authentic collaborations.
           </p>
 
@@ -37,11 +37,11 @@ export const Footer = () => {
         </div>
 
         {/* RIGHT SIDE: LINK COLUMNS (50% Split into 3) */}
-        <div className="w-full md:w-1/2 grid grid-cols-3 gap-6 md:gap-8">
+        <div className="w-full md:w-1/2 grid grid-cols-3 gap-6 md:gap-12">
           {/* PRODUCT */}
           <div className="flex flex-col items-start">
             <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-warm-white">Product</h4>
-            <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-[12px] sm:text-[15px]">
+            <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-xs sm:text-base">
               <Link href="/features" className="hover:underline transition-colors">Features</Link>
               <Link href="/pricing" className="hover:underline transition-colors">Pricing</Link>
               <Link href="/how-it-works" className="hover:underline transition-colors">How It Works</Link>
@@ -52,7 +52,7 @@ export const Footer = () => {
           {/* LEGAL */}
           <div className="flex flex-col items-start">
             <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-white">Legal</h4>
-            <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-[12px] sm:text-[15px]">
+            <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-xs sm:text-base">
               <Link href="/privacy" className="hover:underline transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:underline transition-colors">Terms & Conditions</Link>
               <Link href="/guidelines" className="hover:underline transition-colors">Community Guidelines</Link>
@@ -60,16 +60,16 @@ export const Footer = () => {
           </div>
 
           {/* SUPPORT */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col justify-self-end">
             <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-white">Support</h4>
-            <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-[12px] sm:text-[15px]">
+            <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-xs sm:text-base">
               <Link href="/contact" className="hover:underline transition-colors">Contact Us</Link>
             </div>
           </div>
         </div>
       </div>
       {/* COPYRIGHT */}
-      <div className="flex flex-col w-full max-w-7xl md:flex-row justify-between items-center gap-4">
+      <div className="flex flex-col w-full max-w-[1200px] md:flex-row justify-between items-center gap-4">
         <p className="font-sans font-light text-[13px] md:text-sm">
           © 2026 Unyta. All rights reserved.
         </p>
