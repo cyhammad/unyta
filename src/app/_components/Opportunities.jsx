@@ -159,7 +159,7 @@ export const Opportunities = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              className="text-[#22000C] font-sans font-light text-[17px] md:text-lg leading-relaxed mb-5 max-w-sm"
+              className="text-[#22000C] font-sans font-light leading-relaxed mb-5 max-w-[418px"
             >
               Build your portfolio, track your campaigns, and collaborate with brands that value your content.
             </motion.p>
@@ -190,7 +190,7 @@ export const Opportunities = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "circOut" }}
-            className="hidden lg:flex items-center justify-center px-4 self-center"
+            className="hidden lg:flex items-center justify-center pt-13 px-4"
           >
             <Image
               src="/overlap-image.png"
@@ -237,7 +237,7 @@ export const Opportunities = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              className="text-[#22000C] font-sans font-light text-[17px] md:text-lg leading-relaxed mb-5 max-w-sm"
+              className="text-[#22000C] font-sans font-light leading-relaxed -tracking-normal mb-5 max-w-[418px"
             >
               Launch campaigns with trusted creators. Access insights, streamline communication, and earn authentic reviews.
             </motion.p>
