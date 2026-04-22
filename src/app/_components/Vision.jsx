@@ -30,7 +30,7 @@ export const Vision = () => {
 
   return (
     <section className="w-full h-auto min-h-[429px] bg-[#F9F6F6] flex items-center justify-center py-10">
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center px-5">
         {/* SECTION TITLE */}
         <motion.div 
           initial={{ y: 30, opacity: 0 }}
@@ -69,7 +69,7 @@ export const Vision = () => {
           variants={{
             visible: { transition: { staggerChildren: 0.2 } }
           }}
-          className="relative w-full max-w-7xl mx-auto px-6 md:px-12"
+          className="relative w-full max-w-[1200px] mx-auto"
         >
           {/* CONNECTING LINE (Desktop) */}
           <motion.div 

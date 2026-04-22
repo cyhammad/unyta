@@ -54,7 +54,7 @@ export const WhyChooseUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="font-cormorant text-[36px] md:text-[48px] uppercase font-medium text-white mb-4">
+          <h2 className="font-cormorant text-[36px] md:text-[40px] uppercase font-medium text-white mb-2">
             WHY CHOOSE US?
           </h2>
           <p className="font-sans font-light text-white/70 text-base md:text-lg">

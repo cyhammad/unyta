@@ -12,11 +12,11 @@ export const CTA = ({ onJoinCreator, onJoinBrand }) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-5xl mx-auto flex flex-col items-center"
       >
-        <h2 className="font-cormorant font-semibold text-[36px] md:text-[44px] text-[#22000C] mb-4 leading-tight">
+        <h2 className="font-cormorant font-semibold text-[36px] md:text-[40px] text-[#22000C] mb-4 leading-tight">
           Ready To Transform Your Collaboration Workflow?
         </h2>
         
-        <p className="font-sans font-light text-[#22000C] text-base md:text-xl mb-8 max-w-[588px]">
+        <p className="font-sans font-light text-[#22000C] text-base md:text-[22px] tracking-wider mb-8 max-w-[588px]">
           Join a global community where creators and brands build meaningful partnerships.
         </p>
 

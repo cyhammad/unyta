@@ -66,7 +66,7 @@ export const WhyUnyta = () => {
         </motion.p>
 
         {/* CARDS GRID */}
-        <div className="grid grid-cols sm:grid-cols-3 gap-6 sm:gap-[24px] w-ful px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-[1200px] px-6">
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -74,7 +74,7 @@ export const WhyUnyta = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 + index * 0.15 }}
-              className="bg-white w-[384px]  rounded-[16px] px-4 py-5 border border-[#EADCDC] flex flex-col items-start gap-y-2"
+              className="bg-white w-full rounded-[16px] px-4 py-5 border border-[#EADCDC] flex flex-col items-start gap-y-2"
             >
               <h3 className="font-cormorant text-2xl font-semibold text-[#741717] group-hover:text-[#541409] transition-colors">
                 {card.title}

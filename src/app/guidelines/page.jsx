@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 export default function GuidelinesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white flex flex-col w-full">
       {/* HEADER SECTION */}
       <section className="w-full h-[283px] bg-[#EEE8E6] flex flex-col items-center justify-center pt-20 px-6">
         <motion.div
@@ -25,9 +25,9 @@ export default function GuidelinesPage() {
       </section>
 
       {/* CONTENT REGION */}
-      <section className="max-w-5xl mx-auto py-24 px-6 md:px-12 font-sans font-light text-[#22000C]/90 leading-relaxed text-[15px] md:text-base">
+      <section className="mx-auto py-24 px-6 md:px-12 font-sans font-light text-[#22000C]/90 leading-relaxed text-[15px] md:text-lg">
 
-        <div className="space-y-6">
+        <div className="flex flex-col gap-y-6 max-w-[1200px] w-full">
 
           <div>
             <h2 className="font-cormorant text-2xl text-[#741717] font-semibold mb-3 leading-tight">Audience Authenticity Checks</h2>
