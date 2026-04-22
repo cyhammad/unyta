@@ -9,7 +9,7 @@ export const CTA = ({ onJoinCreator, onJoinBrand }) => {
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "circInOut" }}
         className="max-w-5xl mx-auto flex flex-col items-center"
       >
         <h2 className="font-cormorant font-semibold text-[36px] md:text-[40px] text-[#22000C] mb-4 leading-tight">

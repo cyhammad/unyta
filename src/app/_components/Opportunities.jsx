@@ -107,7 +107,11 @@ const FeaturePill = ({ item, index, direction }) => (
   <motion.div
     variants={{
       hidden: { opacity: 0, x: direction === "left" ? -20 : 20 },
-      visible: { opacity: 1, x: 0, transition: { delay: index * 0.1 } },
+      visible: {
+        opacity: 1,
+        x: 0,
+        transition: { delay: index * 0.15, duration: 0.7, ease: "easeOut" },
+      },
     }}
     className="flex items-center w-fit gap-x-2 pl-3 pr-4 py-2.5 rounded-full border border-[#E9E6E7] text-[#22000C] font-sans font-medium text-sm hover:bg-[#F9F6F6] transition-colors group cursor-default"
   >
@@ -130,14 +134,14 @@ export const Opportunities = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={{
-              visible: { transition: { staggerChildren: 0.1 } },
+              visible: { transition: { staggerChildren: 0.16 } },
             }}
             className="flex flex-col items-start"
           >
             <motion.div
               variants={{
                 hidden: { opacity: 0, x: -20 },
-                visible: { opacity: 1, x: 0 },
+                visible: { opacity: 1, x: 0, transition: { duration: 0.9, ease: "easeOut" } },
               }}
               className="px-4 py-1.5 rounded-full bg-[#EADCDC] text-[#741717] text-xs font-sans font-medium mb-5"
             >
@@ -147,7 +151,7 @@ export const Opportunities = () => {
             <motion.h2
               variants={{
                 hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+                visible: { opacity: 1, y: 0, transition: { duration: 1.1, ease: "easeOut" } },
               }}
               className="font-cormorant text-[36px] md:text-[40px] font-medium text-[#0D0D12] leading-[1.2] mb-5 max-w-md"
             >
@@ -157,7 +161,7 @@ export const Opportunities = () => {
             <motion.p
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.95, ease: "easeOut" } },
               }}
               className="text-[#22000C] font-sans font-light leading-relaxed mb-5 max-w-[418px"
             >
@@ -173,7 +177,7 @@ export const Opportunities = () => {
             <motion.div
               variants={{
                 hidden: { opacity: 0, scale: 0.95 },
-                visible: { opacity: 1, scale: 1 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.95, ease: "easeOut" } },
               }}
               className="flex flex-col items-start gap-y-4"
             >
@@ -189,7 +193,7 @@ export const Opportunities = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "circOut" }}
+            transition={{ duration: 1.35, ease: "circOut" }}
             className="hidden lg:flex items-center justify-center pt-13 px-4"
           >
             <Image
@@ -208,14 +212,14 @@ export const Opportunities = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={{
-              visible: { transition: { staggerChildren: 0.1 } },
+              visible: { transition: { staggerChildren: 0.16 } },
             }}
             className="flex flex-col items-start"
           >
             <motion.div
               variants={{
                 hidden: { opacity: 0, x: 20 },
-                visible: { opacity: 1, x: 0 },
+                visible: { opacity: 1, x: 0, transition: { duration: 0.9, ease: "easeOut" } },
               }}
               className="px-4 py-1.5 rounded-full bg-[#EADCDC] text-[#741717] text-xs font-sans font-medium mb-5"
             >
@@ -225,7 +229,7 @@ export const Opportunities = () => {
             <motion.h2
               variants={{
                 hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+                visible: { opacity: 1, y: 0, transition: { duration: 1.1, ease: "easeOut" } },
               }}
               className="font-cormorant text-[36px] md:text-[40px] font-medium text-[#0D0D12] leading-[1.2] mb-5 max-w-md"
             >
@@ -235,7 +239,7 @@ export const Opportunities = () => {
             <motion.p
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.95, ease: "easeOut" } },
               }}
               className="text-[#22000C] font-sans font-light leading-relaxed -tracking-normal mb-5 max-w-[418px"
             >
@@ -251,7 +255,7 @@ export const Opportunities = () => {
             <motion.div
               variants={{
                 hidden: { opacity: 0, scale: 0.95 },
-                visible: { opacity: 1, scale: 1 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.95, ease: "easeOut" } },
               }}
               className="flex flex-col items-start gap-y-4"
             >
@@ -267,7 +271,7 @@ export const Opportunities = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "circOut" }}
+            transition={{ duration: 1.35, ease: "circOut" }}
             className="flex lg:hidden items-center justify-center -order-1"
           >
             <Image
