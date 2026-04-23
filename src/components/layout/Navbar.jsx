@@ -82,14 +82,8 @@ export const Navbar = () => {
           <Link href="#features" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
             Features
           </Link>
-          <Link href="#pricing" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
-            Pricing
-          </Link>
           <Link href="#how-it-works" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
             How It Works
-          </Link>
-          <Link href="#faq" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
-            FAQ
           </Link>
         </div>
       </motion.nav>

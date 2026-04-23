@@ -1,12 +1,21 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
+
+const DISABLED_PATHS = ["/privacy", "/terms", "/guidelines"];
 
 export const SmoothScroll = ({ children }) => {
   const lenisRef = useRef(null);
+  const pathname = usePathname();
+  const isDisabled = DISABLED_PATHS.some(
+    (p) => pathname === p || pathname?.startsWith(`${p}/`)
+  );
 
   useEffect(() => {
+    if (isDisabled) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -51,10 +60,11 @@ export const SmoothScroll = ({ children }) => {
 
     return () => {
       lenis.destroy();
+      lenisRef.current = null;
       document.removeEventListener('click', handleClick);
       delete window.toggleLenisScroll;
     };
-  }, []);
+  }, [isDisabled]);
 
   return <>{children}</>;
 };

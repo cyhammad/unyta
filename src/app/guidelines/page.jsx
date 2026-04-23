@@ -1,7 +1,5 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "../_components/Footer";
 import { motion } from "motion/react";
 
 export default function GuidelinesPage() {

@@ -1,13 +1,10 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
 import { motion } from "motion/react";
 
 export default function TermsPage() {
   return (
     <main className="min-h-screen bg-white flex flex-col w-full">
-      <Navbar />
-
       {/* HEADER SECTION */}
       <section className="w-full h-[283px] bg-[#EEE8E6] flex flex-col items-center justify-center pt-20 px-6">
         <motion.div

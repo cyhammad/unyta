@@ -42,8 +42,8 @@ export const Footer = () => {
           <div className="flex flex-col items-start">
             <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-warm-white">Product</h4>
             <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-xs sm:text-base">
-              <Link href="/features" className="hover:underline transition-colors">Features</Link>
-              <Link href="/how-it-works" className="hover:underline transition-colors">How It Works</Link>
+              <Link href="#features" className="hover:underline transition-colors">Features</Link>
+              <Link href="#how-it-works" className="hover:underline transition-colors">How It Works</Link>
             </div>
           </div>
 
