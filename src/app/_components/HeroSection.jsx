@@ -67,7 +67,7 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                         <button
                             type="button"
                             onClick={onJoinBrand}
-                            className="h-12 w-full sm:w-auto rounded-full border-2 border-[#741717] bg-white/30 px-8 text-sm tracking-wide text-[#741717] backdrop-blur-sm transition-all hover:bg-white/50 active:scale-95"
+                            className="h-12 w-full sm:w-auto rounded-full border-2 border-[#741717] bg-white/30 px-8 text-sm tracking-wide text-[#741717] backdrop-blur-sm transition-all hover:bg-white/50 hover:scale-105 active:scale-95"
                         >
                             Join as a Brand
                         </button>
