@@ -305,7 +305,7 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                 >
                   {submitting ? "Submitting…" : "Apply for Early Access"}
                 </button>
-                <p className="font-sans font-normal text-stone-700 text-xs sm:text-[13px] text-center pb-2 sm:pb-0">
+                <p className="font-sans font-normal text-[#22000C] text-xs sm:text-[13px] text-center pb-2 sm:pb-0">
                   By signing up, you agree to Unyta&apos;s{" "}
                   <Link href="/terms" onClick={onClose} className="font-semibold underline hover:text-[#741717]">Terms of Service</Link> &{" "}
                   <Link href="/privacy" onClick={onClose} className="font-semibold underline hover:text-[#741717]">Privacy Policy</Link>

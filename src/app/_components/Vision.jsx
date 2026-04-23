@@ -37,24 +37,14 @@ export const Vision = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex items-center gap-x-2 md:gap-x-4 mb-10 md:mb-14 text-center flex-wrap justify-center px-6"
+          className="flex items-center gap-x-2 md:gap-x-2 mb-10 md:mb-14 text-center flex-wrap justify-center px-6"
         >
           <h2 className="font-cormorant text-[32px] md:text-[40px] uppercase font-semibold text-[#0D0D12]">
             Our Vision:
           </h2>
           {/* STYLIZED LOGO */}
-          <div className="flex items-center -mt-1 scale-[0.8] md:scale-[0.9] lg:scale-100">
-              <Image 
-                src="/image.png" 
-                alt="Unyta Logo" 
-                width={38} 
-                height={40} 
-                className="object-contain h-auto"
-                style={{ 
-                  height: "auto",
-                  filter: "brightness(0) saturate(100%) invert(7%) sepia(91%) saturate(2367%) hue-rotate(274deg) brightness(96%) contrast(119%)" 
-                }}
-              />
+          <div className="flex items-center scale-[0.8] md:scale-[0.9] lg:scale-100">
+              <Image src="/logo-vision.svg" alt="Unyta Logo" width={38} height={40} className="object-contain h-auto" />
           </div>
           <h2 className="font-cormorant text-[32px] md:text-[40px] uppercase font-semibold text-[#0D0D12]">
             <span className="font-medium">UNYTA</span> in four steps
@@ -93,7 +83,7 @@ export const Vision = () => {
               >
                 {/* ICON BADGE */}
                 <div
-                  className="w-[52px] h-[52px] rounded-full bg-gradient-to-br from-[#541409] to-[#3a0d05] flex items-center justify-center mb-6"
+                  className="size-16 rounded-full bg-gradient-to-br from-[#541409] to-[#3a0d05] flex items-center justify-center mb-6"
                   style={{ boxShadow: "0px -4px 8px 0px #FFFFFFA3 inset, 0px 4px 10px rgba(84, 20, 9, 0.25)" }}
                 >
                   {step.icon}
