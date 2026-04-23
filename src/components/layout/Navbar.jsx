@@ -49,13 +49,13 @@ export const Navbar = () => {
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-x-6 whitespace-nowrap">
             <Link
-              href="#features"
+              href="/#features"
               className="hover:text-white font-light tracking-wide transition-colors"
             >
               Features
             </Link>
             <Link
-              href="#how-it-works"
+              href="/#how-it-works"
               className="hover:text-white font-light tracking-wide transition-colors"
             >
               How It Works
@@ -79,10 +79,10 @@ export const Navbar = () => {
           className={`md:hidden flex flex-col items-center w-full bg-[#541409] rounded-2xl md:rounded-3xl mt-2 overflow-hidden transition-all duration-300 ease-in-out font-light tracking-wide shadow-2xl ${isOpen ? "max-h-64 py-2 border border-stone-200/10 opacity-100" : "max-h-0 py-0 border-transparent opacity-0"
             }`}
         >
-          <Link href="#features" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
+          <Link href="/#features" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
             Features
           </Link>
-          <Link href="#how-it-works" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
+          <Link href="/#how-it-works" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
             How It Works
           </Link>
         </div>
