@@ -122,7 +122,7 @@ const FeaturePill = ({ item, index, direction }) => (
   </motion.div>
 );
 
-export const Opportunities = () => {
+export const Opportunities = ({ onJoinCreator, onJoinBrand }) => {
   return (
     <section className="w-full py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -163,7 +163,7 @@ export const Opportunities = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.95, ease: "easeOut" } },
               }}
-              className="text-[#22000C] font-sans font-light leading-relaxed mb-5 max-w-[418px"
+              className="text-[#22000C] font-sans font-light leading-relaxed mb-5 max-w-[418px]"
             >
               Build your portfolio, track your campaigns, and collaborate with brands that value your content.
             </motion.p>
@@ -182,7 +182,11 @@ export const Opportunities = () => {
               className="flex flex-col items-start gap-y-4"
             >
               <p className="text-[#741717] text-lg">Apply for Early Access</p>
-              <button className="h-14 px-10 rounded-full bg-[#741717] text-white font-sans text-base tracking-wide shadow-lg hover:bg-[#5a1212] transition-all hover:scale-105 active:scale-95">
+              <button
+                type="button"
+                onClick={onJoinCreator}
+                className="h-14 px-10 rounded-full bg-[#741717] text-white font-sans text-base tracking-wide shadow-lg hover:bg-[#5a1212] transition-all hover:scale-105 active:scale-95"
+              >
                 Join as a Creator
               </button>
             </motion.div>
@@ -241,7 +245,7 @@ export const Opportunities = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.95, ease: "easeOut" } },
               }}
-              className="text-[#22000C] font-sans font-light leading-relaxed -tracking-normal mb-5 max-w-[418px"
+              className="text-[#22000C] font-sans font-light leading-relaxed -tracking-normal mb-5 max-w-[418px]"
             >
               Launch campaigns with trusted creators. Access insights, streamline communication, and earn authentic reviews.
             </motion.p>
@@ -260,7 +264,11 @@ export const Opportunities = () => {
               className="flex flex-col items-start gap-y-4"
             >
               <p className="text-[#741717] text-lg">Apply for Early Access</p>
-              <button className="h-14 px-10 rounded-full bg-[#741717] text-white font-sans text-base tracking-wide shadow-lg hover:bg-[#5a1212] transition-all hover:scale-105 active:scale-95">
+              <button
+                type="button"
+                onClick={onJoinBrand}
+                className="h-14 px-10 rounded-full bg-[#741717] text-white font-sans text-base tracking-wide shadow-lg hover:bg-[#5a1212] transition-all hover:scale-105 active:scale-95"
+              >
                 Join as a Brand
               </button>
             </motion.div>

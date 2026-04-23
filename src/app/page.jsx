@@ -28,7 +28,10 @@ export default function Home() {
       <Vision />
       <PlatformFeatures />
       <WhyUnyta />
-      <Opportunities />
+      <Opportunities
+        onJoinCreator={() => setIsCreatorModalOpen(true)}
+        onJoinBrand={() => setIsBrandModalOpen(true)}
+      />
       {/* <Pricing /> */}
       <GettingStarted />
       <WhyChooseUs />
