@@ -55,22 +55,10 @@ export const Navbar = () => {
               Features
             </Link>
             <Link
-              href="#pricing"
-              className="hover:text-white font-light tracking-wide transition-colors"
-            >
-              Pricing
-            </Link>
-            <Link
               href="#how-it-works"
               className="hover:text-white font-light tracking-wide transition-colors"
             >
               How It Works
-            </Link>
-            <Link
-              href="#faq"
-              className="hover:text-white font-light tracking-wide transition-colors"
-            >
-              FAQ
             </Link>
           </div>
 
