@@ -205,6 +205,7 @@ export const Opportunities = ({ onJoinCreator, onJoinBrand }) => {
               alt="Polaroid collage"
               width={299}
               height={450}
+              quality={100}
               className="object-contain"
               priority
             />
@@ -287,6 +288,7 @@ export const Opportunities = ({ onJoinCreator, onJoinBrand }) => {
               alt="Polaroid collage"
               width={300}
               height={420}
+              quality={100}
               className="object-contain"
               priority
             />

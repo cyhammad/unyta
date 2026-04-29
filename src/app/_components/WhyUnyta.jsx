@@ -35,6 +35,7 @@ export const WhyUnyta = () => {
              alt="Unyta Logo" 
              width={60} 
              height={60} 
+             quality={100}
              className="object-contain"
              style={{ 
                height: "auto",

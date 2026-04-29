@@ -158,6 +158,7 @@ export const CreatorOpportunities = () => {
               alt="Creator Profile Mockup"
               width={580}
               height={1160}
+              quality={100}
               className="object-top drop-shadow-2xl transition-all duration-500"
               style={{ width: "400px", minWidth: "400px", height: "auto" }}
               priority

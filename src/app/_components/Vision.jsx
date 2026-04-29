@@ -44,7 +44,7 @@ export const Vision = () => {
           </h2>
           {/* STYLIZED LOGO */}
           <div className="flex items-center scale-[0.8] md:scale-[0.9] lg:scale-100">
-              <Image src="/logo-vision.svg" alt="Unyta Logo" width={38} height={40} className="object-contain h-auto" />
+              <Image src="/logo-vision.svg" alt="Unyta Logo" width={38} height={40} className="object-contain h-auto" quality={100} />
           </div>
           <h2 className="font-cormorant text-[32px] md:text-[40px] uppercase font-semibold text-[#0D0D12]">
             <span className="font-medium">UNYTA</span> in four steps

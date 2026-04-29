@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { Icons } from "./icons";
 
@@ -135,10 +136,12 @@ export const HowItWorks = () => {
         ))}
       </motion.div>
 
-      {/* CTA BUTTON */}
-      <button className="mt-10 rounded-full bg-[#541409] px-8 py-4 font-light text-[15px] tracking-wide text-white transition-all hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">
+      <Link
+        href="/#features"
+        className="mt-10 inline-flex rounded-full bg-[#541409] px-8 py-4 font-light text-[15px] tracking-wide text-white transition-all hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+      >
         See All Features
-      </button>
+      </Link>
     </section>
   );
 };

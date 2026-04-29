@@ -43,7 +43,7 @@ export const Navbar = () => {
             href="/"
             className="flex items-center justify-center shrink-0"
           >
-            <Image src="/image.png" alt="Unyta Logo" width={21} height={21} className="object-contain" style={{ height: "auto" }} />
+            <Image src="/image.png" alt="Unyta Logo" width={21} height={21} className="object-contain" style={{ height: "auto" }} quality={100} />
           </Link>
 
           {/* Desktop Links */}
@@ -59,6 +59,12 @@ export const Navbar = () => {
               className="hover:text-white font-light tracking-wide transition-colors"
             >
               How It Works
+            </Link>
+            <Link
+              href="/#about"
+              className="hover:text-white font-light tracking-wide transition-colors"
+            >
+              About
             </Link>
           </div>
 
@@ -76,7 +82,7 @@ export const Navbar = () => {
 
         {/* Mobile Dropdown Menu */}
         <div
-          className={`md:hidden flex flex-col items-center w-full bg-[#541409] rounded-2xl md:rounded-3xl mt-2 overflow-hidden transition-all duration-300 ease-in-out font-light tracking-wide shadow-2xl ${isOpen ? "max-h-64 py-2 border border-stone-200/10 opacity-100" : "max-h-0 py-0 border-transparent opacity-0"
+          className={`md:hidden flex flex-col items-center w-full bg-[#541409] rounded-2xl md:rounded-3xl mt-2 overflow-hidden transition-all duration-300 ease-in-out font-light tracking-wide shadow-2xl ${isOpen ? "max-h-80 py-2 border border-stone-200/10 opacity-100" : "max-h-0 py-0 border-transparent opacity-0"
             }`}
         >
           <Link href="/#features" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
@@ -84,6 +90,9 @@ export const Navbar = () => {
           </Link>
           <Link href="/#how-it-works" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
             How It Works
+          </Link>
+          <Link href="/#about" onClick={() => setIsOpen(false)} className="w-full text-center py-3 text-stone-200 hover:text-white hover:bg-white/10 transition-colors">
+            About
           </Link>
         </div>
       </motion.nav>

@@ -21,7 +21,7 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                     }}
                     className="text-balance font-cormorant text-[36px] md:text-[48px] font-semibold tracking-tight text-[#22000C] leading-[1.1] md:leading-[1.2]"
                 >
-                    The members only community
+                    The members<span className="font-sans font-normal">-</span>only community
                     <br />
                     where{" "}
                     <span className="text-[#741717] font-medium">
@@ -85,8 +85,10 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                         <Image
                             src="/left.png"
                             alt="Unyta Left Phone"
-                            width={450}
-                            height={900}
+                            width={900}
+                            height={1800}
+                            quality={100}
+                            sizes="(max-width: 640px) 100px, (max-width: 768px) 140px, (max-width: 1024px) 180px, 220px"
                             className="w-full h-auto object-contain drop-shadow-xl"
                         />
                     </div>
@@ -102,9 +104,11 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                         <Image
                             src="/middle.png"
                             alt="Unyta Middle Phone"
-                            width={400}
-                            height={800}
-                            className="w-full h-auto object-contain drop-shadow-2xl scale-110"
+                            width={960}
+                            height={1920}
+                            quality={100}
+                            sizes="(max-width: 640px) 120px, (max-width: 768px) 160px, (max-width: 1024px) 200px, 240px"
+                            className="w-full h-auto object-contain drop-shadow-2xl"
                         />
                     </div>
                 </motion.div>
@@ -118,8 +122,10 @@ export function HeroSection({ onJoinCreator, onJoinBrand }) {
                         <Image
                             src="/right.png"
                             alt="Unyta Right Phone"
-                            width={450}
-                            height={900}
+                            width={900}
+                            height={1800}
+                            quality={100}
+                            sizes="(max-width: 640px) 100px, (max-width: 768px) 140px, (max-width: 1024px) 180px, 220px"
                             className="w-full h-auto object-contain drop-shadow-xl"
                         />
                     </div>

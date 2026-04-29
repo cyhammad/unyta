@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export const PlatformFeatures = () => {
   return (
-    <section id="features" className="w-full py-24 bg-white flex flex-col items-center overflow-hidden">
+    <section id="features" className="w-full py-24 bg-white flex flex-col items-center overflow-hidden scroll-mt-24 antialiased">
       {/* HEADER */}
       <motion.div
         initial={{ y: 30, opacity: 0 }}
@@ -26,9 +26,17 @@ export const PlatformFeatures = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, margin: "-10%" }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.12 }}
-        className="w-full flex flex-col px-4 items-center justify-center"
+        className="w-full flex flex-col px-4 items-center justify-center max-w-[1060px] mx-auto"
       >
-        <Image src="/platform.png" alt="Platform Features" width={1036} height={945} />
+        <Image
+          src="/platform.png"
+          alt="Platform Features"
+          width={1036}
+          height={945}
+          quality={100}
+          sizes="(max-width: 1100px) 100vw, 1036px"
+          className="w-full h-auto max-w-[1036px] mx-auto"
+        />
       </motion.div>
     </section>
   );

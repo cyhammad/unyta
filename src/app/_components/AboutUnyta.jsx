@@ -19,7 +19,7 @@ export const AboutUnyta = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <section className="w-full py-24 bg-[#F9F6F6] flex flex-col items-center overflow-hidden">
+    <section id="about" className="w-full py-24 bg-[#F9F6F6] flex flex-col items-center overflow-hidden scroll-mt-24">
       <div className="max-w-[1096px] mx-auto px-6 w-full flex flex-col items-center text-center">
         
         {/* LOGO */}
@@ -36,6 +36,7 @@ export const AboutUnyta = () => {
             width={54} 
             height={54} 
             className="object-contain"
+            quality={100}
             style={{ 
               height: "auto",
               filter: "brightness(0) saturate(100%) invert(11%) sepia(34%) saturate(4529%) hue-rotate(346deg) brightness(91%) contrast(98%)" 

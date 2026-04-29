@@ -99,9 +99,8 @@ export const BrandDialog = ({ isOpen, onClose }) => {
             className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm"
           />
 
-          {/* POSITIONING WRAPPER */}
-          {/* Mobile: full-screen centered | Tablet: centered | Desktop: top-right */}
-          <div className="fixed inset-0 z-[110] flex items-end sm:items-center lg:items-start lg:justify-end p-0 sm:p-6 pointer-events-none">
+          {/* Centered modal */}
+          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-6 pointer-events-none overflow-y-auto">
 
             {/* DIALOG CONTAINER */}
             <motion.div
@@ -110,13 +109,11 @@ export const BrandDialog = ({ isOpen, onClose }) => {
               exit={{ y: 100, opacity: 0, scale: 0.97 }}
               transition={{ type: "spring", damping: 28, stiffness: 320 }}
               className={[
-                "relative pointer-events-auto flex flex-col overflow-y-auto scrollbar-hide",
+                "relative pointer-events-auto flex flex-col overflow-y-auto scrollbar-hide my-auto",
                 "bg-white shadow-2xl border border-stone-200",
-                /* Mobile: full-width bottom sheet */
-                "w-full h-[95dvh] rounded-t-[24px] rounded-b-none pt-6 px-5 pb-6 gap-4",
-                /* Tablet: centered card */
-                "sm:w-[480px] sm:h-auto sm:max-h-[90vh] sm:rounded-[24px] sm:pt-8 sm:px-8 sm:pb-8 sm:gap-4",
-                "lg:w-[712px] lg:h-[780px] lg:max-h-[92vh] lg:rounded-[24px] lg:pt-10 lg:px-10 lg:pb-10 lg:gap-4 lg:mt-4",
+                "w-full max-w-[min(100vw-2rem,712px)] max-h-[92vh] h-auto min-h-0",
+                "rounded-[24px] pt-8 px-6 pb-8 gap-4 sm:pt-10 sm:px-10 sm:pb-10 sm:gap-4",
+                "sm:max-w-[480px] lg:max-w-[712px]",
               ].join(" ")}
               data-lenis-prevent
             >
@@ -136,6 +133,7 @@ export const BrandDialog = ({ isOpen, onClose }) => {
                   width={48} 
                   height={48} 
                   className="object-contain mb-3 w-[36px] sm:w-[48px]"
+                  quality={100}
                   style={{ 
                     height: "auto",
                     filter: "brightness(0)" 
