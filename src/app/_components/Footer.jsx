@@ -8,15 +8,22 @@ export const Footer = () => {
     <footer className="flex flex-col w-full bg-[#541409] text-warm-white lg:h-[366px] pt-14 pb-6 gap-12 items-center px-6">
       <div className="flex flex-col w-full max-w-[1200px] md:flex-row justify-between items-start gap-12 md:gap-0 h-full">
         <div className="w-full md:w-1/2 flex flex-col items-start gap-3 pr-4">
-          <Image
-            src="/footer-logo.png"
-            alt="Unyta Logo"
-            width={412}
-            height={86}
-            quality={100}
-            sizes="(max-width: 768px) 180px, 206px"
-            className="object-contain w-[180px] sm:w-[206px] h-auto"
-          />
+          <div className="flex items-center gap-2">
+            <Image
+              src="/image.png"
+              alt="Unyta Logo"
+              width={40}
+              height={43}
+              quality={100}
+            />
+            <Image
+              src="/footer-logo.png"
+              alt="Unyta Logo"
+              width={150}
+              height={34}
+              quality={100}
+            />
+          </div>
           <p className="font-sans font-light text-base leading-relaxed max-w-[320px]">
             The members only community where creators and brands connect for authentic collaborations.
           </p>
