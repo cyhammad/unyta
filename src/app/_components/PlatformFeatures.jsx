@@ -29,7 +29,7 @@ export const PlatformFeatures = () => {
         className="w-full flex flex-col px-4 items-center justify-center max-w-[1060px] mx-auto"
       >
         <Image
-          src="/platform.webp"
+          src="/platform.png"
           alt="Platform Features"
           width={1036}
           height={945}
