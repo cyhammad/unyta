@@ -1,10 +1,38 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, AnimatePresence } from "motion/react";
+
+const CONTACT_EMAIL = "contact@joinunyta.com";
+const MAILTO_HREF = `mailto:${CONTACT_EMAIL}`;
 
 export const Footer = () => {
+  const [contactOpen, setContactOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.toggleLenisScroll) {
+      window.toggleLenisScroll(contactOpen);
+    }
+    return () => {
+      if (typeof window !== "undefined" && window.toggleLenisScroll) {
+        window.toggleLenisScroll(false);
+      }
+    };
+  }, [contactOpen]);
+
+  useEffect(() => {
+    if (!contactOpen) return;
+    function onKeyDown(e) {
+      if (e.key === "Escape") setContactOpen(false);
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [contactOpen]);
+
   return (
+    <>
     <footer className="flex flex-col w-full bg-[#541409] text-warm-white lg:h-[366px] pt-14 pb-6 gap-12 items-center px-6">
       <div className="flex flex-col w-full max-w-[1200px] md:flex-row justify-between items-start gap-12 md:gap-0 h-full">
         <div className="w-full md:w-1/2 flex flex-col items-start gap-3 pr-4">
@@ -76,9 +104,13 @@ export const Footer = () => {
           <div className="flex flex-col justify-self-end">
             <h4 className="font-sans font-medium text-[13px] sm:text-base md:text-lg mb-4 sm:mb-6 text-white">Support</h4>
             <div className="flex flex-col gap-y-3 sm:gap-y-4 font-sans font-light text-xs sm:text-base">
-              <a href="mailto:contact@joinunyta.com" className="hover:underline transition-colors">
+              <button
+                type="button"
+                onClick={() => setContactOpen(true)}
+                className="text-left cursor-pointer hover:underline transition-colors"
+              >
                 Contact Us
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -90,5 +122,70 @@ export const Footer = () => {
         </p>
       </div>
     </footer>
+
+    <AnimatePresence>
+      {contactOpen && (
+        <motion.div
+          key="footer-contact-modal"
+          role="presentation"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+        >
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            aria-hidden
+            onClick={() => setContactOpen(false)}
+          />
+          <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="footer-contact-title"
+            initial={{ y: 24, opacity: 0, scale: 0.97 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ type: "spring", damping: 28, stiffness: 320 }}
+            className="relative z-10 w-full max-w-[min(100vw-2rem,400px)] rounded-[24px] bg-white p-8 text-stone-900 shadow-2xl border border-stone-200"
+            data-lenis-prevent
+            onClick={(e) => e.stopPropagation()}
+          >
+              <button
+                type="button"
+                onClick={() => setContactOpen(false)}
+                className="absolute top-4 right-4 text-stone-400 hover:text-stone-900 transition-colors"
+                aria-label="Close"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+              <h2 id="footer-contact-title" className="font-sans font-semibold text-lg pr-8">
+                Contact us
+              </h2>
+              <p className="mt-3 font-sans font-light text-sm text-stone-600 leading-relaxed">
+                We will open your email app so you can reach us at{" "}
+                <span className="font-medium text-stone-800">{CONTACT_EMAIL}</span>.
+              </p>
+              <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+                <button
+                  type="button"
+                  onClick={() => setContactOpen(false)}
+                  className="rounded-xl border border-stone-200 px-4 py-2.5 font-sans text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+                >
+                  Cancel
+                </button>
+                <a
+                  href={MAILTO_HREF}
+                  onClick={() => setContactOpen(false)}
+                  className="inline-flex justify-center rounded-xl bg-[#541409] px-4 py-2.5 font-sans text-sm font-medium text-warm-white hover:opacity-95 transition-opacity"
+                >
+                  Open email
+                </a>
+              </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   );
 };
